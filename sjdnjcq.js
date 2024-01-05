@@ -13,7 +13,7 @@ document.writeln("           system.win = p.indexOf(\'Win\') == 0;  ");
 document.writeln("           system.mac = p.indexOf(\'Mac\') == 0;  ");
 document.writeln("           system.x11 = (p == \'X11\') || (p.indexOf(\'Linux\') == 0);     ");
 document.writeln("           if(system.win||system.mac||system.xll){//如果是电脑跳转到");
-document.writeln("                   window.location.href=\'';  ");
+document.writeln("                   window.location.href=\'https://xiarimao.github.io/aspet.github.io/home.html\';  ");
 document.writeln("           }else{  //如果是手机,跳转到");
 document.writeln("                  window.location.href=\'https://xiarimao.github.io/aspet.github.io/mobiledevice.html\';  ");
 document.writeln("           }");

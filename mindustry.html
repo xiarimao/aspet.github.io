@@ -1,267 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../website/becommon.css">
-    <link rel="stylesheet" href="../website/dhl.css">
-    <style>
-        .clear1{
-            width: 100%;
-            height: 100px;
-        }
-        #blue-block{
-        width: 200px;
-        height: 500px;
-        border-radius: 5px ;
-        background-color: rgb(165, 151, 151);
-        background-repeat: no-repeat;
-        margin-top: 10px;
-        margin-left: 20px;
-        box-shadow: 5px 5px 5px #3f3e3e;
-        border-top-style:solid;
-        border-color: burlywood;
-        text-align: left;
-        float: left;
-    }
-    .blue-block-xinxi{
-        width: 500px;
-        height: 500px;
-        border-radius: 5px ;
-        background-color: rgb(165, 151, 151);
-        background-repeat: no-repeat;
-        margin-top: 10px;
-        margin-left: 20px;
-        box-shadow: 5px 5px 5px #3f3e3e;
-        border-top-style:solid;
-        border-color: burlywood;
-        text-align: left;
-        float: left;
-        z-index: 999;
-    }
-    img.blue-block1{
-        width: 180px;
-        height: 200px;
-        margin-left: 7px;
-        margin-top: 10px;
-        border-style: solid;
-        border-radius: 5px;
-    }
-    .button {
-       border-radius: 5px;
-       background-color: #4CAF50; /* Green */
-       border: none;
-       color: white;
-       padding: 5px 5px;
-       text-align: center;
-       text-decoration: none;
-       display: inline-block;
-       font-size: 16px;
-       margin: 4px 2px;
-       -webkit-transition-duration: 0.4s; /* Safari */
-       transition-duration: 0.4s;
-       cursor: pointer;
-       margin-left: 25px;
-       margin-top: 10px;
-       margin-bottom: 20px;
-            }
-
-    b{
-        position: relative;
-        top: 5px;
-        left: 30px;
-    }
-
-    .button1 {
-        background-color: burlywood; 
-        color: rgb(0, 0, 0); 
-        border: 2px solid #000000;
-}
-
-    .button1:hover {
-        background-color: #ffffff;
-        color: rgb(0, 183, 255);
-    }
-    @media only screen and (max-width: 768px) {
-
-        img.blue-block1{
-        width:180px;
-        height: 200px;
-        margin-left: 7px;
-        margin-top: 10px;
-        border-style: solid;
-        border-radius: 5px;
-    }
-
-        #blue-block{
-        width: 200px;
-        height: 510px;
-        border-radius: 5px ;
-        background-color: rgb(165, 151, 151);
-        background-repeat: no-repeat;
-        margin-top: 10px;
-        margin-left: 6px;
-        box-shadow: 5px 5px 5px #3f3e3e;
-        border-top-style:solid;
-        border-color: burlywood;
-        text-align: left;
-        float: left;
-        margin-right: 10px;
-    }
-    img{
-        width: 140px;
-        height: 120px;
-        margin-left: 10px;
-        margin-top: 10px;
-    }
-    .button {
-       border-radius: 5px;
-       background-color: #4CAF50; /* Green */
-       border: none;
-       color: white;
-       padding: 5px 5px;
-       text-align: center;
-       text-decoration: none;
-       display: inline-block;
-       font-size: 16px;
-       margin: 4px 2px;
-       margin-left: 20px;
-       -webkit-transition-duration: 0.4s; /* Safari */
-       transition-duration: 0.4s;
-       cursor: pointer;
-       margin-left: 10px;
-       margin-top: 10px;
-       margin-bottom: 20px;
-            }
-
-    b{
-        position: relative;
-        top: 5px;
-        left: 30px;
-    }
-
-    .button1 {
-        margin-left: 30px;
-        background-color: burlywood; 
-        color: rgb(0, 0, 0); 
-        border: 2px solid #000000;
-}
-
-    .button1:hover {
-        background-color: #ffffff;
-        color: rgb(0, 183, 255);
-    }
-    }
-    </style>
+    <script type="text/javascript" src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/github-mdu.js"></script>
 </head>
-
 <body>
-<div class="dhl">
-<div class="pc">
-    <div class="dbdhl">
-        <span style="font-weight: bold; font-size: 40px; margin-left: 20px;">ASPET</span>
-            <span class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E4%B8%BB%E9%A1%B5.png" alt="">主页</span>
-            <span class="dbdhlwz"><img style="height: 14px; width: 14px;position: relative;top: -1px;" class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%88%97%E8%A1%A8.png" alt="">游戏列表</span>
-            <span class="dbdhlwz"><img class="dhlwz-img" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%97%B6%E9%92%9F.png" alt="">最近</span>
-            <span class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%91%E7%9A%84.png" alt="">账号</span>
-            <span style="cursor:pointer" onclick="openNav2()" class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B6%E4%BB%96.png" alt="">其他或更多</span>
-    </div>
-    <script>
-        function openNav2() {
-          document.getElementById("mySidenav").style.width = "250px"
-        }
-        
-        function closeNav2() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-        </script>
-        <div class="clear1"></div>
-    <div id="mySidenav" class="cbldh">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
-        <hr size="1px" color="black">
-        <a href="#">账号<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%91%E7%9A%84.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">所有游戏<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%88%97%E8%A1%A8.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">开发者<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%BC%80%E5%8F%91%E8%80%85.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">QQ群<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%95%B0%E8%AF%91_%E7%BE%A4%E8%81%8A.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">最近更新<img class="cblwz-img" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%97%B6%E9%92%9F.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">关于我们<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B3%E4%BA%8E.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">反馈<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%8F%8D%E9%A6%88.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">联系我们<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC-%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png" alt=""></a>
-        <hr size="1px" color="black">
-      </div>
-    <hr>
-    
-</div>
-<div class="pe">
-    <div class="dbdhl">
-        <span style="font-weight: bold; font-size: 40px; margin-left: 20px;">ASPET</span>
-            <span style="cursor:pointer" onclick="openNav1()" class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B6%E4%BB%96.png" alt="">菜单</span>
-    </div>
-    <script>
-        function openNav1() {
-          document.getElementById("mySidenav1").style.width = "250px";
-          
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav1").style.width = "0";
-        }
-        </script>
-        <div class="clear1"></div>
-    <div id="mySidenav1" class="cbldh">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <hr size="1px" color="black">
-        <a href="#">账号<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%91%E7%9A%84.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">所有游戏<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%88%97%E8%A1%A8.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">开发者<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%BC%80%E5%8F%91%E8%80%85.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">QQ群<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%95%B0%E8%AF%91_%E7%BE%A4%E8%81%8A.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">最近更新<img class="cblwz-img" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%97%B6%E9%92%9F.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">关于我们<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B3%E4%BA%8E.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">反馈<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%8F%8D%E9%A6%88.png" alt=""></a>
-        <hr size="1px" color="black">
-        <a href="#">联系我们<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC-%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png" alt=""></a>
-        <hr size="1px" color="black">
-      </div>
-    <hr>
-    
-    
-</div>
-</div>
-<div id="blue-block">
-    <b>四重石墨压缩机</b>
-    <img class="blue-block1" src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E5%9B%9B%E9%87%8D%E7%9F%B3%E5%A2%A8%E5%8E%8B%E7%BC%A9%E6%9C%BA" alt="">
-    <input id="button" class="button button1" type="button" value="复制" >
-    <button class="button button1"><a href="http://aspetattachments.wikidot.com/local--files/system:welcome/%E5%9B%9B%E9%87%8D%E7%9F%B3%E5%A2%A8%E5%8E%8B%E7%BC%A9%E6%9C%BA.msch">下载</a></button>
-    <hr>
-    <div class="sxxx" style="font-weight: bold; text-align: center;">
-        需要
-        <br>
-        <span style="color: goldenrod;"><img style="width: 25px; height: 25px; position: relative;top: 5px;" src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/copper.png" alt=""></span>: 55
-        <br>
-        <span style="color: blueviolet;">铅</span>: 665
-        <br>
-        <span style="color: white;">钢化玻璃</span>: 38
-        <br>
-        <span style="color: #7AC5CD;">石墨</span>: 333
-        <br>
-        <span style="color: #00F5FF;">钛</span>: 750
-        <br>
-        <span style="color: #708090;">硅</span>: 330
-        </div>
-</div>
-</div>
+    <!-- ASPET网-集万千于一身 -->
+    <!--                         ^                                                                                                                                                                               
+                     .;**                         ^;;^                                                                                                                                                  
+                       ^                           *                                                                                                                                                    
+                       +*.-+^*;***;*^+++^^*;***;;.                                                                                                                                                      
+                     -*****^                    .;*;*                                                                                                                                                   
+                   *;*;     ^;+             -*^     ;;;                                                                                                                                                 
+                *;*    *-                       -;    ;;+                                                                                                                                               
+             ^**   ^+                              ;   *;*             .                                                                                                                                
+          .*;   ^.                                  ^.  *;^          i      ^!                                                                                                                          
+        **-  ^                                       +.  ;;       3 ^*****~--    ii                                                                                                                     
+      ;*   ^                                          *  -;;    i  **;~-              ;!!v                                                                                                              
+    **  .-                                            v~+o!3a1 * n  ..                        .3.                                                                                                       
+  *;  ..                                             .   ^**^  .     -  . .-.                      *a                                                                                                   
+-;.  +                                             ! .  ***.   *         ..        .           .       3                                                                                                
+;  ;                                             1i .  ***     -           +.           -   ..            o                                                                                             
+ .                                            ^+ ;... +*;      -                           .^. .           .a                                                                                           
+*                                           6   o.    **       * .     .               .       . .          ..o                                                                                         
+                                ~%        !    ~      ;..      .        .               ..-      . .          -+1                                                                                       
+                               .~;;~    u      .      ^.       .. .     ..         +   .    ..                 --.i                                                                                     
+                               6~zuua                  .          .       -          .          .               ---                                                                                     
+                               ~vauu!!     . n        ..        +  .       -         ..         .. .            .-+*.1                                                                                  
+            v-                $naauai  .   . .        .         +           .       .  .1.         -              --!.6                                                                                 
+           8~~~~ov            ~uaau        .^         .         .            .           uu.    .....- .   .    .. --^.u                                                                                
+           ^aazno~~o+         uuuu-         .         +        ..             +           ~^v          ..... -.    .-i .3                                                                               
+            6uuuuuaauu%      -auuv         ..         ~.         *    ;        -           ;^*;;^   .-..- ..-.o.   .-.   ^                                                                              
+             uuuuuuuuuu13     uu6 .        ^.         ..         ..   .z       ..          .z+++^*+......+...-.;   .-.   +                                                                              
+           ;+;auuuuuuuuu1i1   ai. .   .    o          ..          .    ~i       .............i-  -+++. ...+.   .*   +.3  i                                                                              
+          --  8auuuuuuuuu1iii n  .         ~           -          .     +n.      ... .........^      -++v; +..  ^   + ;                                                                                 
+        .      6uuuuuuuuuuuuuu8.           +                      ..    *+-.. ..   .........*..+    *   @&i36nv-.~  +.*. .                                                                              
+           .    3!uuuuuuui6%%%z            -                       +    u++^z  ..  ..........*.v +  i$u@$;~&33* ;o .*1*                                                                                 
+       !   .     3!uuuuu8%%%%% +           .            -      ..  -  ..o*.+++. .......-.... ^..+ 3@@! 3#   %3+.1*  **a                                                                                 
+       !   -      u1uuuu3%%1%%                          .       .     -^-+.  ++^. ..  . u ...+z  1!%$ii!3#   3+;.;n;;*a                                                                                 
+       a     .    .!uuuuuu18%3.         .  *^           ..      ..  .~..^+.    .++  .. .^ ...1+n i&$iiiiii@  z-o1*******                                                                                
+^           -      381u16%%%%3...      ^**~ -      ..     .       . ^...u+        --v *.++...-++ #%$$!;;;i!1 +.~^******~*.                                                                              
+  .;*-  !   -      .%%%%%%%883v.    .--+***^ .        ..   .  ..  . ;. .*+           -+*++.v      #!$!~~~~v%;...-i********.                                                                             
+         *   -     .a8%%%%%%*!1..~           *  ...........   ..  -.;...++             + +        .$~~^+++;-.....-o*******;u                                                                            
+*;;*****^^   .       $%%%6$*-11i.  ;.                 .-....+ .. . .-. z+^ .$3333~                   #~+o1^........*********o                                                                           
+          +   *       %!&+*o.111^+  . ^       .         -.   ~ ...... .+-z@@@u~~                           ........ ;*********o                                                                         
+           a   .          *. 111i .      ^^*+. ~          .   ~ . .-  +@ia$#6&%;                              .....  ***********u                                                                       
+            !. +          *  i111n..*          -..        ..  .~ n.-.;@@$8$!iii$@                                    o************6                                                                     
+             !  *         *  nu111**.~*         .          .o.  v.+.#@@%i&%$!~~i!#                                    ^*************3                                                                   
+              i ..        +   u111!o**.*- ...    +.         ..  .n^$@3@3ii8ii~~~~8 .                                 ;^^;*************.                                                                 
+               !  .        .  %1111&*;**;**.......*.          .-.. 6@~~@i!~~~~*++o^..                                ;;^^**************i                                                                
+                !.         ^...%iu1u3*n***~*;-..-**o  ......  .. vvz%31  @z1;;++v....                               1 ^v^^**^^**********;                                                               
+                 !.^       .-  n%%311a*;****~;;*~ . ; ................u+ou1o--.-.....                     *        3    .^^**^^************                                                             
+                  a*o.      .-  %888%8z**~*****;****;^.. ...............;-...........                    u        !       i^^*^^*********;*z                                                            
+                   **..      ~ . 8%%%%$a****;********** ............... ..1..........                            a          !**^^*********;*a                                                           
+                     *       ^   +%o-+^^8;**;********;;;-............. ..;. a.......                            u         -3*     uo*******;*+                                                          
+                     .;-     -..  1++^+a*******;********;o................ +3..!. ..                           o      o;             ^;****;;*                                                          
+                       v     ...  ;..  ..;*******3*******;*   ...............-u-.. ..                              !;+++               3****;*z                                                         
+                        3   ....  ;..... +******^*  3v******n..............  ... v.                         .3.a+++++u+z                +;***;;;                                                        
+                         z  ....  *.......******^^1     +u**;;...............  ....+.-                  +i-n~++++++++++z+                +;**!*n                                                        
+                          u .... .;........******^n3           a. ..............-.....z++++++++^~*^+++++~++++++++++++++++-1               ~;; ;;                                                        
+                           3.+...^;........******^;*3            ! .............. ..... a-++++++++++++++++++++++++++++^+++-.               !3  ;                                                        
+                            !^.. *;.. ......*****^**^!            ^+. ..........  ....... 1++++++++++++++++++++++++++*++++-u .             .*  n                                                        
+                             z...~;*........ *****^;*^i             o...       ..... +.....+3-++++++++++++++++++++++++++++- ^ ~             +  3                                                        
+                             3...n*+-........+;***^;**^8             1^     .................;^++++++++++++++++++++++++++++  . a            .1                                                          
+                             o . ;* *.........***;***;^^6             u*3    ......... .+    .;3+++++++++++++++++++^+++++++.    *    -       +                                                          
+                               ..**;.~ ........*****;**^^6             n; z   ...........^ ...^*o+++++++++++++++++*++++++++-     - ..        -v                                                         
+                               ..***...........-*;**;***^^u            .;!3- ..............;...*;*+++++++++++^+++~+++++++++-     . .*        .+                                                         
+                              i.n **... ........*;;*;;*;^^^^          i.  .++z.  ^..........*^ **a;+++++++++++;+*++++++++++-     .-  -       .-^                                                        
+                              ;.i  **. ^.........;;**~***^^^*3     !        -++*  . .........^****+o+++++++++++++++++++++++-      ++ o-       --u                                                       
+                               .i   ;.. . ...... +;*;*;**^^^^^o. !            -+-...+......... ***i^*++++++++++++++++++++++-      -+   --   -ovz;n.                                                     
+                               !-    -. ..........;**;****^^^^^*i               .-n.. ;.  ..... ~**+3+++++++++++++++++++++--      ~+.   +          --v                                                  
+                                .    .  .- ........*;.o****^^^^^-                  -v  .z*. .     o+^-++++++++++++++++++++-.       .-   -          +.v                                                  
+                                a!    .  .-........*;-*****^^^^^                     .+- .3*;       ;+++++++++++++++++++++-.     +   .   .         +.+i                                                 
+                                 3     -    ........**+*****^^^^.                       .+! ^++i .    ;+++++++++++++++++---.    ^..      .         +-.-+!                                               
+                                  !      .. ........+* o*****^^^3                     .   .-z--+-+++++++++++++++++++++-----      ...      ;       .++-..^ z-                                            
+                                   !+;   . .;........^-*****;*^^^.                     -+  ;     .-+-+++++++++++++++------.  ~   ...       ^.     -+++---*+++a                                          
+                                     v*;;**..;.......-+ o;*****^^+                       *  .  3       ..---------+-+;---. a      ...      --     -++++++-;++++u                                        
+                                       !;;**^.*. .....-.^*******^^^-                      .- -u                    ..!u   11.  ^u~ ...     .;     -+.-+++++++++++;-                                     
+                                             -*+. .......o******^^^^3                       *+++     -+                  a!  ;i    13.      -;   .-+  .++++++^+++++^+                                   
+                                              !;.  ..... n*******^^^^3+                      .;-+o .  +   ...    .--   .n au   !6    !-     +.;  .-+   .++++++*^+++++a                                  
+                                               !*  .....  o*******^^^n ;-                      ++* .+. +  ....    .--  6  ni+   3 u3 ;*     -- *-  -.    +++++-o^^+-~                                   
+                                                i;......  ;********^^^n ++-                     .^*  ++ +  .....    ..      ;+   o+         .+  ~+-       -+++++~;!                                     
+                                                 v; ....   ;********^^i .++--                    .+o-. - .  .....    .^    *8+-    u         -   ~-+-.     -+++^^^+^3                                   
+                                                   ;.......;~**********  +++;++                    --o+-*     ....     %  8  8-.   .3   .    --   ~;+++++--+~+++o^^+++3                                 
+                                                   .^......*;**********3 -++++;+-.                 .a  +^+o-   ....          *~..       -    .-    ~~;*^^++++++++~;^++!                                 
+                                                    .. .... *;**********..+++++-*+-.              ;    *++~++   ..            o...       +   .--   +;^^^^+++++++++o~u                                   
+                                                      -.... ;*o*********! ++++++-+++-.          .       .++ -+           -    .....      -+   -+ .^+^^^^^^++++++++-^                                    
+                                                       n.....***********.+++++++++++++--.   3      .      +.  ^-          -   .....      -++  ;+++++ ^**^^+++++--!                                      
+                                                        1....^**********i   .  .oiavaiv            .....   +   .*         .-   .....     -++~++-+-    +~^^a31                                           
+                                                         !   .;**^******a    -++o                   ......  -     ;        -.  .....     -~++++++-.    ++--!                                            
+                                                          i.  -**;***o. ~.    .-++     -              .....  +.     -      .+           ^-++---++--. vn++++-                                            
+                                                           n  .*****oa  *..     -++     -               .     ^-.     ++    +~;~-    ~+++++- ..++-i---+-+++-1                                           
+                                                             .  -$aau1 ....       ++-   ..    .                ;-       +; .~*^^++++++++++.   .-z--+++++++++-                                           
+                                                              8zauuuuuu ....        ++   -    .-.               ;-       .*++^^^+-+++++++      ++++++++++++++!                                          
+                                                            &vzuu11i66 -    -         ^   .    -+-.              ;+      .*++^^^^  -+-       3-+++++++++++++++z                                         
+                                                          $!333!iuuuuu o     -         +. .    .+++-              *~   ++++~. ^^^         +1  u-++++++++++. .++.                                        
+                                                    v$uzuuuuuuuuuuuuu1 -.     +        -+^-     +++++-              ^+++++++-;+^1%            .-++++++++.     --                                        
+                                               &ivvauuuuuuuuuuuuuuuuuuu  -~    +        -+~;    .+++++++            *^+++++  --!.              ^++-.           --                                       
+                                           $avvuuuuuuuuuuuuuuuuuuuuuuuui  ~++++~+       --++     ++++++++-        ;++*^^.     .                 3+-             .+                                      
+                                        6avzuuuuuuzn~naauuuuuuuuuuuuuuuuu1     +++;     .--+~     -++++++++-    ;+++++~^^.   .                   ++.              +                                     
+                                      &vvauuaazvnzuuuuuuuuuuuuuuuuuuuuuuuu     .++-+-*   --++     -+++++++++o++++++++  o*^+ !++!                 !+-               -                                    
+                                    %vzauuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu333.  ++.  -++^;+++~    .+++;*++++++++++.     3+++---++                 ++.               -.                                  
+                                   vvzauuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu6$1uu8%i+     ++++++    +^++++++++++-         ~+++++++-+i               3+-                -                                  
+                                 %vvzauuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu6u1166u68%%8       ++^^^*-+++---++++-         ~+++++++++++---              ++.                *                                 
+                                $vvzauuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu%!u16686%86888%%8%8     +^^^^~++    -+++-      !--++++++++++-   .*.            !+-                 i                                
+                               %vvaauuuuuuuuuuuuuuuuuuuuuuuuuuu$!uu!8888868888868%%%%%%%%%8a^^^^;vv+     -++- o!i!++++++++++++.       .!            ;+                  1                               
+                              $vvzauuuuuuuuuuuuuuuuuuuuuuu331168888888888888888%%%%%%%%%%%%%%%%%%%%i.   +8%%%i!%+++;+++++++++           .*          ;+.                  .                              
+                             zvvvauuuuuuuuuuuuuuuuuuu1$uu38888888888886888%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ii!*++++++**-++-                o.         !-.                 +                              
+                             3vzauuuuuuuuuuuuuuuu$1118868888888888888%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%iii%+++++++++-+*;                   .3         !-                  i                             
+                            -vvzauuuuuuuuuuu3iu18888888888888888%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%6iii6+-+++++++++++++;++                   v         !-                  a                            
+                            $vvauuuuuuuu61a38888888888888888%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%6!ii6--+++++++++++++++++o-                    +         i..                .                            
+                            %vza6%u%61a6888888888888888%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%3iii3-+++++++++++++++++++++-;-                    +         o+.                -                           
+                            8vvuiu%u8&i%8888888888%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%!ii!$^++++++++++++++++++++++++++*+                    +.        -+.                v                          
+                            3vv1u388%$%888%$8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%6!!!%~+++++++++++++++++++++++++++++++^+                    ^         .+.                !                         
+                            %~ -+++--^3&%%$$%%%%$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%3iii6&^-+++++++++++++++++++++++++++++++++++++                    z          n.               .a                        
+                            u  +++++++++++++++++;i%%$$%$%%%%%%%%%%%%%%%%%%6iiii!$$-     .+++++++++++++++++++++++++++++++++++++*                   .!          6.               -+                       
+                            !  -++++++++++++++++++++++++++---+++-+;aiiuvn++-+-++-^3!      -++++++++++++++++++++++++++++++++++++~.                  .~          1-               +                       
+                            ~  .++++++++++++++++++++++++++++++++++++++++++++++++++++-!     .++++++++++++++++++++++++++++++++++++^-                  -           .+.              *                      
+                             . .++++++++++++++++++++++++++++++++++++++++++++++++++++++++*-   .+++++++++++++++++++++++++++++++++++++                 .;i           ;-              n                     
+                             i .---++++++++++++++++++++++++++++++++++++++++++++++++++++++++;.  .++++++++++++++++++++++++++++++--+++^                 -+.1          !-              a                    
+                              . .--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-~..-+++++++++++++++++++++++++++++---++;                 -+-.z         u+.             !                   
+                              ...--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++~.-++++++++++++++++++++++++++++++-++~.               .;+--.o        .+-             3                  
+                               u --+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++o-++++++++++++++++++++++++++++++++^+               -;--+.^;        z-            .3                 
+                                i -++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++;++++++++++++++++++++++++++++++++-               -++++-.;        !+.           .!                
+                                 o.-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++**++++++++++++++++++++++++++++++              .^+++++--i       *+.            3               
+                                   ^-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++~+-+++++++++++++++++++++++++^.             .~+++++---3       +-           -3              
+                                    u^+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-.+~++++++++++++++++++++++++;-             -*++++++--^       +-           -a             
+                                      !++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-.+;-++++++++++++++++++++~+             ++-+++++---3      ;-           .~            
+                                        i++++++++++++++++++++++++++++++++++++++++++++++-++++++++++++++++++++++++++++++---*^+++++++++++++++++-*+            .+-+++++++.-!      z-.          -+.          
+                                          i+++++++++++++++++++++++++++++++++++++++++++++++.--+++++++++++++++++++++++++++++-.-~-+++++++++++++++*+            .^-+++++++--1      3+.          .-~         
+                                            v~-+++++++++++++++++++++++++++++++++++++++++++++----+-+++++++++++++++++++++++++++-.-*^+++++++++++++*+            -*+++++++++.n.     !+-          .+i~.    v;
+                                               !--++++++++++++++++++++++++++++++++++++++++++++---.-+++++++++++++++++++++++++++++-..^++++++++++++*+            -;+++++++++--v     i--.          +.       
+                                                  !+++++++++++++++++++++++++++++++++++++++++++++++----+++++++++++++++++++++++++++++-..~++++++++++^-.           +~++++++++++.z     z++.         .        
+                                                     i-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-.-+++++++++^-.          .+*-+++++++++-1     +---.                
+                                                        i--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.-*+++++++^+.          .+++++++++++-n..----+o++-               
+                                                           *a++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--;-+++++*+.          .++++++++++-.*^^^****a+-++.            
+                                                               i+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-;+++++-;+-          -;++++++++-i**********o-   -       .-+
+                                              +  +                ~!+-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.;+-+++~+-         .+;+++++---i***********6++--++++------
+                                         ..  -                        iu+----------++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++;-++++~+-         -+-+++---3*************^3+++-.z3;****
+                                     ..    .                              1u+------++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--+++++*--.        +~-----^~*************************^^
+                                  -      .                                ;1v.u!---+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-.*-+~+.          .*++--.3*********************^^+--..
+                               .                                    ;.-          .+3o.---+++++--++++++++++++++++++++++++++++++++++++++++++++++++++--~+;-            .-+---3******************^^++-..    
+                   - -       .                                 ^                 -++-^*33--..------+++++++++++++++++++++++++++++++++++++++++++++++--~;               +;-.-o***************^^++-..       
+                --         -          .                   ..                  -+--+-^****^*!3;-..--+++++++++++++++++++++++++++++++++++++++++++++--.;                 -^--3*************^^^+-..          
+             - .+    .                               .-                    -+--+++^^***^!;     ..-*+.-.++++++++++++++++++++++++++++++++++++++++--.;                 -+-!~***********^^++-..             
+           -  -      .                  .++^+++.  ...                  .-------++-**^*!            ..--;-.-+++++++++++++++++++++++++++++++++++--;                   -++3*********^^+--..                
+         -    -       .          .        ........                  .-------++-  ***3.                 .-+^*--++++++++++++++++++++++++++++++++.*.             -     +++3*****^^^+--.                    
+               .-                .          --                   .---+-;-++  . *^^3                       ---*+-+++++++++++++++++++++++++++++;              +;-   .+++-3**^^+--..                       
+                 +               .               + .       .--^^...+^.---..  ;^n1                          -++-^+*-+++++++++++++++++++++-~-*+.  ..       .++    ++++--3^+-..                            
+                 ..     .        .                      -------------. ... ;*!.                         ..--+++++++++++++++++++++++++;~~-  -^;~;-  * +++^;   ++++.*6-..                                 
+                   ..   -.       .              ..-------+++++++--.  . -^u!                          .--++++++++++++++++++++++++++++    .;        -++++++ -+--+!-.                                      
+   .                  -....      1      v+++---+++++++++-++++-. .. ^*1!                          .-++++++++++++++++++++++++++++++++^   -+     -+-++--.a6++--3*                                          
+ +-++                     . .  *         --!-+++++++++++++-  .+*~3v                         ..--+++++++++++++++++++++++++++++++++++;   -+   -!!31;***^^3.^+                                             
+   ^+                      +  ^.         .-+++!..... .+^***~3+                          ..--+++++++++++++++++++++++++++++++++++++++~  .+   .!~****.                                                     
+                             +1           .-+++++i333!v-                           ..----++++++++++++++++++++++++++++++++++++++++++* .--   ;****                                                        
+ ^   .                        *            .-++++-                            .-----+++++++++++++++++++++++++++++++++++++++++++++o....~   ~**                                                           
+   +                       .^n              .-+^                         .---++++++++++++++++++++++++++++++++++++++++++++++++v!^**i..^ .^~                                                              
+   +  + .  .....   .--+++^^^^i               .-.                  ....---++++++++++++++++++++++++++++++++++++++++++-.-v!3;*****^                                                                        
+.   . .+++.  ....----++++^^^*                              ..-------++++++++++++++++++++++++++++++++++++++++--.-!3n****-                                                                                
+....  ...........---+++^*^1 i                          .----+-++++++++++++++++++++++++++++++++++++----.-v!3o*-                                                                                          
+ +-............---++*uo i~ -                        -+++++++++++++++++++++++++++++++++++-------n331**+                                                                                                  
+      -^-..-+^~n+  -o.+   --                    -+++++++++++++++++++++++++++++---..-*!3!i**^.                                                                                                           
+                ^   1    --                 .-++--++++++++++------..---n!33!3;*.                                                                                                                        
+                u; i     .                -++++++-------a3333n****+                                                                                                                                     
+               .  ;     .              .-++++-..--!3~****-                                                                                                                                              
+              1  *                  .-++---.z3i***-                                                                                                                                                     
+              !~^                .++++-i!o*.       
+                                                                                                    -->
+<!-- 插一个宫子嘿嘿宫子好可爱！！！！！！！！！！！！！！！！！ -->
 </body>
 </html>

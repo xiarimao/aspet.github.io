@@ -3,160 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/becommon.css">
-    <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/dhl.css">
+    <link rel="stylesheet" href="../website/becommon.css">
+    <link rel="stylesheet" href="../website/dhl.css">
     <style>
-        .clear1{
-            width: 100%;
-            height: 100px;
+      @media only screen and (max-width: 768px) {
+        .dow{
+          width: 100%;
+          height: 400px;
+          margin-left: -70px;
+          margin-top: 10px;
+          background-color: white;
+          box-shadow: 5px 5px 5px #424242;
+          border-radius: 10px;
+          float: left;
+          position: relative;
+          left: 20%;
+            a:hover{
+                color: white;
+            }
         }
-        #blue-block{
-        width: 200px;
-        height: 500px;
-        border-radius: 5px ;
-        background-color: rgb(165, 151, 151);
-        background-repeat: no-repeat;
-        margin-top: 10px;
-        margin-left: 20px;
-        box-shadow: 5px 5px 5px #3f3e3e;
-        border-top-style:solid;
-        border-color: burlywood;
-        text-align: left;
-        float: left;
-    }
-    .blue-block-xinxi{
-        width: 500px;
-        height: 500px;
-        border-radius: 5px ;
-        background-color: rgb(165, 151, 151);
-        background-repeat: no-repeat;
-        margin-top: 10px;
-        margin-left: 20px;
-        box-shadow: 5px 5px 5px #3f3e3e;
-        border-top-style:solid;
-        border-color: burlywood;
-        text-align: left;
-        float: left;
-        z-index: 999;
-    }
-    img.blue-block1{
-        width: 180px;
-        height: 200px;
-        margin-left: 7px;
-        margin-top: 10px;
-        border-style: solid;
-        border-radius: 5px;
-    }
-    .button {
-       border-radius: 5px;
-       background-color: #4CAF50; /* Green */
-       border: none;
-       color: white;
-       padding: 5px 5px;
-       text-align: center;
-       text-decoration: none;
-       display: inline-block;
-       font-size: 16px;
-       margin: 4px 2px;
-       -webkit-transition-duration: 0.4s; /* Safari */
-       transition-duration: 0.4s;
-       cursor: pointer;
-       margin-left: 25px;
-       margin-top: 10px;
-       margin-bottom: 20px;
+        img.game{
+          width: 100px;
+          height: 100px;
+          margin-left: 130px;
+        }
+        .game-text{
+          font-weight: bold;
+          margin-left: 140px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            border-radius: 30px;
+            color: white;
+            padding: 16px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            margin-left: 15px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 5px 5px 5px #888888;
+        }
+
+        .button1 {
+          margin-left: 90px;
+            background-color: white; 
+            color: black; 
+            border: 2px solid #000000;
+        }
+        .button1-1 {
+          margin-left: 60px;
+            background-color: white; 
+            color: black; 
+            border: 2px solid #000000;
+        }
+
+        .button1:hover {
+            background-color: #00ccff;
+            color: white;
+        }
+        .tbtp{
+          position: absolute;
+          top: 70px;
+          width: 360px;
+          height: 300px;
+        }
+        .kfry{
+          width: 100%;
+          height: 300px;
+          background-color: #ffffff;
+          clear: both;
+          border-radius: 10px;
+          position: relative;
+          top: 100px;
+        }
+        img.kfry-img{
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          border-style: solid;
+          border-width: 5px;
+          position: relative;
+          left: 35%;
+          transition: all 0.2s linear;
+
+        }
+        img.kfry-img:hover{
+          transform: scale(1.1);
+          transition: all 0.2s linear;
+        }
+        a:hover{
+          color: #00ccff;
+        }
+        .kfry-text{
+          font-weight: bold;
+          position: relative;
+          left: 12px;
+          top: 20px;
+        }
+      }
+      @media only screen and (orientation: landscape) {
+        .dow{
+          width: 200px;
+          height: 400px;
+          margin-left: 30px;
+          margin-top: 10px;
+          background-color: white;
+          box-shadow: 5px 5px 5px #424242;
+          border-radius: 10px;
+          float: left;
+          position: relative;
+          left: 20%;
+            a:hover{
+                color: white;
             }
+        }
+        img.game{
+          width: 100px;
+          height: 100px;
+          margin-left: 40px;
+        }
+        .game-text{
+          font-weight: bold;
+          margin-left: 55px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            border-radius: 30px;
+            color: white;
+            padding: 16px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            margin-left: 15px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 5px 5px 5px #888888;
+        }
 
-    b{
-        position: relative;
-        top: 5px;
-        left: 30px;
-    }
+        .button1 {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #000000;
+        }
 
-    .button1 {
-        background-color: burlywood; 
-        color: rgb(0, 0, 0); 
-        border: 2px solid #000000;
-}
+        .button1:hover {
+            background-color: #00ccff;
+            color: white;
+        }
+        img.tbtp{
+          margin-top: 50px;
+          width: 100%;
+          height: 700px;
+        }
+        .kfry{
+          width: 100%;
+          height: 300px;
+          background-color: #ffffff;
+          clear: both;
+          border-radius: 10px;
+          position: relative;
+          top: 100px;
+        }
+        img.kfry-img{
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          border-style: solid;
+          border-width: 5px;
+          position: relative;
+          left: 45%;
+          transition: all 0.2s linear;
 
-    .button1:hover {
-        background-color: #ffffff;
-        color: rgb(0, 183, 255);
-    }
-    @media only screen and (max-width: 768px) {
-
-        img.blue-block1{
-        width:180px;
-        height: 200px;
-        margin-left: 7px;
-        margin-top: 10px;
-        border-style: solid;
-        border-radius: 5px;
-    }
-
-        #blue-block{
-        width: 200px;
-        height: 510px;
-        border-radius: 5px ;
-        background-color: rgb(165, 151, 151);
-        background-repeat: no-repeat;
-        margin-top: 10px;
-        margin-left: 6px;
-        box-shadow: 5px 5px 5px #3f3e3e;
-        border-top-style:solid;
-        border-color: burlywood;
-        text-align: left;
-        float: left;
-        margin-right: 10px;
-    }
-    img{
-        width: 140px;
-        height: 120px;
-        margin-left: 10px;
-        margin-top: 10px;
-    }
-    .button {
-       border-radius: 5px;
-       background-color: #4CAF50; /* Green */
-       border: none;
-       color: white;
-       padding: 5px 5px;
-       text-align: center;
-       text-decoration: none;
-       display: inline-block;
-       font-size: 16px;
-       margin: 4px 2px;
-       margin-left: 20px;
-       -webkit-transition-duration: 0.4s; /* Safari */
-       transition-duration: 0.4s;
-       cursor: pointer;
-       margin-left: 10px;
-       margin-top: 10px;
-       margin-bottom: 20px;
-            }
-
-    b{
-        position: relative;
-        top: 5px;
-        left: 30px;
-    }
-
-    .button1 {
-        margin-left: 30px;
-        background-color: burlywood; 
-        color: rgb(0, 0, 0); 
-        border: 2px solid #000000;
-}
-
-    .button1:hover {
-        background-color: #ffffff;
-        color: rgb(0, 183, 255);
-    }
-    }
+        }
+        img.kfry-img:hover{
+          transform: scale(1.1);
+          transition: all 0.2s linear;
+        }
+        a:hover{
+          color: #00ccff;
+        }
+      }
+      .kfry-text{
+          font-weight: bold;
+          position: relative;
+          left: 450px;
+          top: 20px;
+        }
     </style>
 </head>
 
 <body>
-<div class="dhl">
+  <div class="dhl">
 <div class="pc">
     <div class="dbdhl">
         <span style="font-weight: bold; font-size: 40px; margin-left: 20px;">ASPET</span>
@@ -236,32 +284,48 @@
         <hr size="1px" color="black">
       </div>
     <hr>
+    <div class="clear"></div>
     
-    
 </div>
 </div>
-<div id="blue-block">
-    <b>四重石墨压缩机</b>
-    <img class="blue-block1" src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E5%9B%9B%E9%87%8D%E7%9F%B3%E5%A2%A8%E5%8E%8B%E7%BC%A9%E6%9C%BA" alt="">
-    <input id="button" class="button button1" type="button" value="复制" >
-    <button class="button button1"><a href="http://aspetattachments.wikidot.com/local--files/system:welcome/%E5%9B%9B%E9%87%8D%E7%9F%B3%E5%A2%A8%E5%8E%8B%E7%BC%A9%E6%9C%BA.msch">下载</a></button>
-    <hr>
-    <div class="sxxx" style="font-weight: bold; text-align: center;">
-        需要
-        <br>
-        <span style="color: goldenrod;"><img style="width: 25px; height: 25px; position: relative;top: 5px;" src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/copper.png" alt=""></span>: 55
-        <br>
-        <span style="color: blueviolet;">铅</span>: 665
-        <br>
-        <span style="color: white;">钢化玻璃</span>: 38
-        <br>
-        <span style="color: #7AC5CD;">石墨</span>: 333
-        <br>
-        <span style="color: #00F5FF;">钛</span>: 750
-        <br>
-        <span style="color: #708090;">硅</span>: 330
-        </div>
+<img class="tbtp" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%96%B0%E9%A1%B9%E7%9B%AE%20205%20%5BAC8FC1E%5D.png" alt="">
+<hr>
+<div>
+<div class="dow">
+  <img class="game" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E4%B8%8B%E8%BD%BD.png" alt="">
+  <br>
+  <span class="game-text">游戏下载</span>
+  <hr>
+  <button class="button button1"><a href="https://wwtk.lanzouo.com/if6SM1k8fhre">手机端下载</a></button>
+  <button class="button button1"><a href="https://wwtk.lanzouo.com/iPRzI1k8a9rg">电脑端下载</a></button>
+  <button class="button button1 button1-1"><a href="https://wwtk.lanzouo.com/ikpdJ1k8aa5a">手机端联机软件下载</a></button>
 </div>
+<div class="dow">
+  <img class="game" src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/blueprint-3d-plan-dimension-design-project-cube-3f.png" alt="">
+  <br>
+  <span class="game-text">蓝图/其他</span>
+  <hr>
+  <button class="button button1"><a href="https://xiarimao.github.io/aspet.github.io/aspet-wiki.html">蓝图大全</a></button>
+  <button class="button button1">模组/MOD</button>
+  <button class="button button1">上传蓝图</button>
+</div>
+<div class="dow">
+  <img class="game"src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E6%94%BB%E7%95%A5.png" alt="">
+  <br>
+  <span class="game-text">攻略</span>
+  <hr>
+  <button style="width: 180px;" class="button button1">关卡攻略</button>
+  <button style="width: 180px;" class="button button1">百科</button>
+  <button class="button button1 button1-1">联机攻略（手机）</button>
+</div>
+</div>
+<hr style="clear: both;position: relative;top: 20px;">
+<div class="kfry">
+    <h1 style="text-align: center;">参与该页面制作的开发人员</h1>
+    <a href="https://qm.qq.com/q/KZFkRiiCMq">
+    <img class="kfry-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/IMG_20240119_190628.jpg" alt="">
+    </a>
+    <span class="kfry-text">ASS·月雪宫子</span>
 </div>
 </body>
 </html>

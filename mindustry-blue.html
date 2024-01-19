@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/becommon.css">
     <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/dhl.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-
-body {
-        background-color: #c5c3c3;
-        background-attachment: fixed;/*背景图片不会固定不会因页面滚动而重复*/
-        background-repeat: no-repeat;/*使图片不管任何大小都不会重复*/
-        background-size:100% 100%;
-    }
-
-    #blue-block{
+    <style>
+        .clear1{
+            width: 100%;
+            height: 100px;
+        }
+        #blue-block{
         width: 200px;
         height: 500px;
         border-radius: 5px ;
@@ -28,7 +24,22 @@ body {
         text-align: left;
         float: left;
     }
-    img{
+    .blue-block-xinxi{
+        width: 500px;
+        height: 500px;
+        border-radius: 5px ;
+        background-color: rgb(165, 151, 151);
+        background-repeat: no-repeat;
+        margin-top: 10px;
+        margin-left: 20px;
+        box-shadow: 5px 5px 5px #3f3e3e;
+        border-top-style:solid;
+        border-color: burlywood;
+        text-align: left;
+        float: left;
+        z-index: 999;
+    }
+    img.blue-block1{
         width: 180px;
         height: 200px;
         margin-left: 7px;
@@ -73,16 +84,18 @@ body {
     }
     @media only screen and (max-width: 768px) {
 
-        body {
-        background-color: #c5c3c3;
-        background-attachment: fixed;/*背景图片不会固定不会因页面滚动而重复*/
-        background-repeat: no-repeat;/*使图片不管任何大小都不会重复*/
-        background-size:100% 100%;
+        img.blue-block1{
+        width:180px;
+        height: 200px;
+        margin-left: 7px;
+        margin-top: 10px;
+        border-style: solid;
+        border-radius: 5px;
     }
 
         #blue-block{
-        width: 160px;
-        height: 410px;
+        width: 200px;
+        height: 510px;
         border-radius: 5px ;
         background-color: rgb(165, 151, 151);
         background-repeat: no-repeat;
@@ -112,6 +125,7 @@ body {
        display: inline-block;
        font-size: 16px;
        margin: 4px 2px;
+       margin-left: 20px;
        -webkit-transition-duration: 0.4s; /* Safari */
        transition-duration: 0.4s;
        cursor: pointer;
@@ -127,6 +141,7 @@ body {
     }
 
     .button1 {
+        margin-left: 30px;
         background-color: burlywood; 
         color: rgb(0, 0, 0); 
         border: 2px solid #000000;
@@ -137,89 +152,116 @@ body {
         color: rgb(0, 183, 255);
     }
     }
-</style>
+    </style>
 </head>
+
 <body>
-<!--主体-->
-<div id="content" >
-    <h1 style="text-align: center; color: goldenrod;">ASPET</h1>
-    <hr>
-    <div id="blue-block">
-        <b>四重石墨压缩机</b>
-        <img class="blue-block1" src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E5%9B%9B%E9%87%8D%E7%9F%B3%E5%A2%A8%E5%8E%8B%E7%BC%A9%E6%9C%BA" alt="">
-        <input id="button" class="button button1" type="button" value="复制" >
-        <button class="button button1"><a href="http://aspetattachments.wikidot.com/local--files/system:welcome/%E5%9B%9B%E9%87%8D%E7%9F%B3%E5%A2%A8%E5%8E%8B%E7%BC%A9%E6%9C%BA.msch">下载</a></button>
-        <hr>
-        <div class="sxxx" style="font-weight: bold; text-align: center;">
-            需要
-            <br>
-            <span style="color: goldenrod;">铜</span>: 55
-            <br>
-            <span style="color: blueviolet;">铅</span>: 665
-            <br>
-            <span style="color: white;">钢化玻璃</span>: 38
-            <br>
-            <span style="color: #7AC5CD;">石墨</span>: 333
-            <br>
-            <span style="color: #00F5FF;">钛</span>: 750
-            <br>
-            <span style="color: #708090;">硅</span>: 330
-            </div>
+<div class="dhl">
+<div class="pc">
+    <div class="dbdhl">
+        <span style="font-weight: bold; font-size: 40px; margin-left: 20px;">ASPET</span>
+            <span class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E4%B8%BB%E9%A1%B5.png" alt="">主页</span>
+            <span class="dbdhlwz"><img style="height: 14px; width: 14px;position: relative;top: -1px;" class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%88%97%E8%A1%A8.png" alt="">游戏列表</span>
+            <span class="dbdhlwz"><img class="dhlwz-img" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%97%B6%E9%92%9F.png" alt="">最近</span>
+            <span class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%91%E7%9A%84.png" alt="">账号</span>
+            <span style="cursor:pointer" onclick="openNav2()" class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B6%E4%BB%96.png" alt="">其他或更多</span>
     </div>
-</div>
-<!--侧边栏-->
-<div class="sidebarback">
-    <div class="sidebar">
-        <button id="sideopenbutton">&lt;</button>
-        <div id="sidebarbox">
-            <span class='button button1'><a href='https://xiarimao.github.io/aspet.github.io/'>主页</a></span>
-                <span class='button button1'>影视</span>
-                <span class='button button1'>音乐</span>
-                <span class='button button1'><a href='https://xiarimao.github.io/aspet.github.io/aspet-wiki.html'>游戏</a></span>
-                <span class='button button1'>我的</span>
-                <span class='button button1'>工具</span>
-        </div>
-    </div>
-</div>
-<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
-</script>
-<script>
-    $("#sideopenbutton").attr("open1",0);
-    $("#sideopenbutton").click(function (e){
-        e.stopPropagation();
-        if($("#sideopenbutton").attr("open1")==0){
-            open(); 
-        }else{
-            close();
+    <script>
+        function openNav2() {
+          document.getElementById("mySidenav").style.width = "250px"
         }
-    });
-    $(".sidebarback").click(function () {
-        close();
-    });
-    $(".sidebar").click(function () {
-        event.stopPropagation();
-    });
-    function open() {
-        $("#sideopenbutton").attr("open1",1);
-        $("#sideopenbutton").html(">");
-        $(".sidebar").toggleClass("sidebar-open");
-        $(".sidebarback").toggleClass("sideback-open");
-        $(".sidebarback").css("pointer-events","auto");
-    }
-    function close(){
-        $("#sideopenbutton").attr("open1",0);
-        $("#sideopenbutton").html("<");
-        $(".sidebar").toggleClass("sidebar-open");
-        $(".sidebarback").toggleClass("sideback-open");
-        $(".sidebarback").css("pointer-events","none");
-    }
- 
-</script>
-<script>
-    var btn = document.getElementById("button");
-    btn.onclick =function(){
-        navigator.clipboard.writeText('bXNjaAF4nGVSyW7TUBS9Ht+znSB1gcSuX+AfYMlvIBZp/FQZOXbqAcQOJKouGFYIAalohaACNq0EqIMq+WfqOPmIYu6AygIn10fn+tzh2A9GMHbAzSczA7e7xWK996o/+NF9+tq9ftFfflvuX0CUmGpapvM6LXIA8LPJlskqsO8/CGGjTutJnjazeFrkj8yTooRo1mR1Gs9LU1XgV0VZmxLGWbrTpElcFg3RW1tlmmwbKkqatIbxvMmqfzScF49NGedFYsD/W6IfNvmUV1Az7DzZNrjLXQwIwQawwMfAvxLQAoEASixAmyS3UclMC+Nyh5IEyGzU+R4SlLuS8MDBBN4xOOuBp0Au7IUUyymrFPfEyyKtJuJBwMUU2M3jTS0uEXAEXLB8BE+7w/UwgDMMwzU+o58Cn3V4UwIaHEoGYGsE9uBDBE6AAnAtuLNq31+dfe/2T5Zvz5fvjlftYnnys//wHJXqxo0SN4rd2Ju44j0MasxZdgO4x2/Wsht140bRWJo3wnnx//O63S/97uf+oMWpV5eH66fPurOj1elxf9GyAdycv5BLbbW8ck7wh9HSHQ1i9xF2X++9XLUf+ze/8GFAGxKw8VBYKCySkxDJSYjkJERyEiKS/AG0YZDH')
-    }
-</script>
+        
+        function closeNav2() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+        <div class="clear1"></div>
+    <div id="mySidenav" class="cbldh">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <hr size="1px" color="black">
+        <a href="#">账号<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%91%E7%9A%84.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">所有游戏<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%88%97%E8%A1%A8.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">开发者<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%BC%80%E5%8F%91%E8%80%85.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">QQ群<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%95%B0%E8%AF%91_%E7%BE%A4%E8%81%8A.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">最近更新<img class="cblwz-img" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%97%B6%E9%92%9F.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">关于我们<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B3%E4%BA%8E.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">反馈<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%8F%8D%E9%A6%88.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">联系我们<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC-%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png" alt=""></a>
+        <hr size="1px" color="black">
+      </div>
+    <hr>
+    
+</div>
+<div class="pe">
+    <div class="dbdhl">
+        <span style="font-weight: bold; font-size: 40px; margin-left: 20px;">ASPET</span>
+            <span style="cursor:pointer" onclick="openNav1()" class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B6%E4%BB%96.png" alt="">菜单</span>
+    </div>
+    <script>
+        function openNav1() {
+          document.getElementById("mySidenav1").style.width = "250px";
+          
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav1").style.width = "0";
+        }
+        </script>
+        <div class="clear1"></div>
+    <div id="mySidenav1" class="cbldh">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <hr size="1px" color="black">
+        <a href="#">账号<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%91%E7%9A%84.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">所有游戏<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%88%97%E8%A1%A8.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">开发者<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%BC%80%E5%8F%91%E8%80%85.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">QQ群<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%95%B0%E8%AF%91_%E7%BE%A4%E8%81%8A.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">最近更新<img class="cblwz-img" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%97%B6%E9%92%9F.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">关于我们<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B3%E4%BA%8E.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">反馈<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%8F%8D%E9%A6%88.png" alt=""></a>
+        <hr size="1px" color="black">
+        <a href="#">联系我们<img class="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC-%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png" alt=""></a>
+        <hr size="1px" color="black">
+      </div>
+    <hr>
+    
+    
+</div>
+</div>
+<div id="blue-block">
+    <b>四重石墨压缩机</b>
+    <img class="blue-block1" src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E5%9B%9B%E9%87%8D%E7%9F%B3%E5%A2%A8%E5%8E%8B%E7%BC%A9%E6%9C%BA" alt="">
+    <input id="button" class="button button1" type="button" value="复制" >
+    <button class="button button1"><a href="http://aspetattachments.wikidot.com/local--files/system:welcome/%E5%9B%9B%E9%87%8D%E7%9F%B3%E5%A2%A8%E5%8E%8B%E7%BC%A9%E6%9C%BA.msch">下载</a></button>
+    <hr>
+    <div class="sxxx" style="font-weight: bold; text-align: center;">
+        需要
+        <br>
+        <span style="color: goldenrod;"><img style="width: 25px; height: 25px; position: relative;top: 5px;" src="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/copper.png" alt=""></span>: 55
+        <br>
+        <span style="color: blueviolet;">铅</span>: 665
+        <br>
+        <span style="color: white;">钢化玻璃</span>: 38
+        <br>
+        <span style="color: #7AC5CD;">石墨</span>: 333
+        <br>
+        <span style="color: #00F5FF;">钛</span>: 750
+        <br>
+        <span style="color: #708090;">硅</span>: 330
+        </div>
+</div>
+</div>
 </body>
 </html>

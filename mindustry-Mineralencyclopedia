@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百科页面</title>
+    <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/becommon.css">
+    <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/dhl.css">
+    <style>
+        
+        .clear1{
+            width: 100%;
+            height: 100px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .button1-x {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #ffffff;
+            margin-left: 20px;
+            box-shadow: 5px 5px 5px #888888;
+        }
+
+        .button1-x:hover {
+            background-color: #00e1ff;
+            color: white;
+            
+        }
+            .img-1{
+              width: 40px;
+              height: 40px;
+              position: relative;
+              left: -3px;
+            }
+        .game-block{
+            margin-top: 10px;
+            box-shadow: 3px 3px 3px #888888;
+            height: 600px;
+        }
+        .btn{
+          position: absolute;
+          right: 10px;
+          top: 500px;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          border: 0px;
+          background-color: white;
+          box-shadow: 3px 3px 3px #888888;
+          transition: all 0.2s linear;
+          position: fixed;
+            img{
+              width: 30px;
+              height: 30px;
+            }
+        }
+        .btn:hover{
+          box-shadow: 3px 3px 3px black;
+          transition: all 0.2s linear;
+        }
+    </style>
+    <style>
+      @media only screen and (orientation: landscape) {
+        .baikexinxi-text{
+          margin-left: -10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .clear11{
+          width: 100%;
+          height: 20px;
+        }
+        .img-tsxx{
+          width: 35px;
+          height: 35px;
+          vertical-align:middle
+        }
+        .xinxi-1111{
+          border-radius: 10px; 
+          border: 3px solid black;
+          padding: 5px; 
+          margin-left: 10px; 
+          font-size: 25px;
+        }
+        .xinxi-2222{
+          font-weight: bold;
+        }
+        .pe{
+          display: none;
+        }
+      }
+          @media only screen and (max-width: 768px) {
+  
+        .button11 {
+            background-color: white; 
+            box-shadow: 5px 5px 5px 5px #888888;
+            color: black; 
+        }
+  
+        .button11:hover {
+            background-color: #929292;
+            color: white;
+        }
+        .da{
+          visibility: hidden;
+          transition: all 0.2s linear;
+        }
+        .baikexinxi-text{
+          margin-left: -10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .clear11{
+          width: 100%;
+          height: 20px;
+        }
+        .img-tsxx{
+          width: 35px;
+          height: 35px;
+          vertical-align:middle
+        }
+        .xinxi-1111{
+          border-radius: 10px; 
+          border: 3px solid black;
+          padding: 5px; 
+          margin-left: 10px; 
+          font-size: 25px;
+        }
+        .xinxi-2222{
+          font-weight: bold;
+        }
+        .pc{
+          display: none;
+        }
+          }
+          body{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    </style> 
+</head>
+<div id="db" class="dhl">
+  <div class="pc">
+      <div class="dbdhl">
+          <span style="font-weight: bold; font-size: 40px; margin-left: 20px;">ASPET</span>
+              <span class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E4%B8%BB%E9%A1%B5.png" alt=""><a href="https://xiarimao.github.io/aspet.github.io/">主页</a></span>
+              <span class="dbdhlwz"><img style="height: 14px; width: 14px;position: relative;top: -1px;" class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%88%97%E8%A1%A8.png" alt=""><a href="http://aspet.fun/aspet-wiki.html">游戏列表</a></span>
+              <span class="dbdhlwz"><img class="dhlwz-img" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%97%B6%E9%92%9F.png" alt="">最近</span>
+              <span class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%91%E7%9A%84.png" alt="">账号</span>
+              <span style="cursor:pointer" id="openNav2" class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B6%E4%BB%96.png" alt="">其他或更多</span>
+      </div>
+          <div class="clear1"></div>
+          <div id="cbldh">
+            <span style="margin-left: 120px;font-weight: bold;font-size: 30px;">ASPET</span>
+              <hr>
+              <a href="#"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%91%E7%9A%84.png" alt="">账号</a>
+              <hr>
+              <div class="clear-1-2-x"></div>
+              <a href="https://xiarimao.github.io/aspet.github.io/aspet-wiki.html"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%88%97%E8%A1%A8.png" alt="">所有游戏</a>
+                   <div class="clear-1-2-x"></div>      
+              <a href="https://qm.qq.com/q/KZFkRiiCMq"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%BC%80%E5%8F%91%E8%80%85.png" alt="">开发者</a>
+                   <div class="clear-1-2-x"></div>
+              <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=vXsXAtSmJ2vOiofPUEu600DHmwfaiSbw&authKey=ZlVdr6GSa0zujCx8MqPmApyxsXDSzFkT3kHwLkreGvRd7FOIKVWBftAap24GEGG%2F&noverify=0&group_code=808247066        "><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%95%B0%E8%AF%91_%E7%BE%A4%E8%81%8A.png" alt="">QQ群</a>
+                   <div class="clear-1-2-x"></div>
+              <a href="#"><img id="cblwz-img" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%97%B6%E9%92%9F.png" alt="">最近更新</a>
+                   <div class="clear-1-2-x"></div>
+              <a href="#"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B3%E4%BA%8E.png" alt="">关于我们</a>
+                   <div class="clear-1-2-x"></div>
+              <a href="https://xiarimao.github.io/aspet.github.io/fankui.html"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%8F%8D%E9%A6%88.png" alt="">反馈</a>
+                   <div class="clear-1-2-x"></div>    
+              <a href="https://qm.qq.com/q/KZFkRiiCMq"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC-%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png" alt="">联系我们</a>
+                   <div class="clear-1-2-x"></div>
+            </div>
+            <script>
+                 const bt = document.getElementById('openNav2');
+                 const div = document.getElementById('cbldh');
+             
+                 bt.addEventListener('click',function(event){
+                   div.style.width = '350px';
+                   event.stopPropagation();//阻止冒泡
+                 })
+             
+                 document.addEventListener('click',function(){
+                   div.style.width = '0px';
+                 });
+             
+                 div.addEventListener('click',function(event){
+                   event.stopPropagation();//阻止冒泡
+                 })
+             
+                 </script>
+      
+  </div>
+  <div class="pe">
+      <div class="dbdhl">
+          <span style="font-weight: bold; font-size: 40px; margin-left: 20px;">ASPET</span>
+              <span style="cursor:pointer" id="openNav1" class="dbdhlwz"><img class="dhlwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B6%E4%BB%96.png" alt="">菜单</span>
+      </div>
+          <div class="clear1"></div>
+      <div id="cbldh1">
+       <span style="margin-left: 60px;font-weight: bold;font-size: 30px;">ASPET</span>
+       <hr>
+       <a href="#"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%91%E7%9A%84.png" alt="">账号</a>
+       <hr>
+       <div class="clear-1-2-x"></div>
+       <a href="aspet.fun"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E4%B8%BB%E9%A1%B5.png" alt="">主页</a>
+            <div class="clear-1-2-x"></div>      
+       <a href="http://aspet.fun/aspet-wiki.html"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%88%97%E8%A1%A8.png" alt="">所有游戏</a>
+            <div class="clear-1-2-x"></div>      
+       <a href="https://qm.qq.com/q/KZFkRiiCMq"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%BC%80%E5%8F%91%E8%80%85.png" alt="">开发者</a>
+            <div class="clear-1-2-x"></div>
+       <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=vXsXAtSmJ2vOiofPUEu600DHmwfaiSbw&authKey=ZlVdr6GSa0zujCx8MqPmApyxsXDSzFkT3kHwLkreGvRd7FOIKVWBftAap24GEGG%2F&noverify=0&group_code=808247066        "><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%95%B0%E8%AF%91_%E7%BE%A4%E8%81%8A.png" alt="">QQ群</a>
+            <div class="clear-1-2-x"></div>
+       <a href="#"><img id="cblwz-img" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%97%B6%E9%92%9F.png" alt="">最近更新</a>
+            <div class="clear-1-2-x"></div>
+       <a href="#"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%85%B3%E4%BA%8E.png" alt="">关于我们</a>
+            <div class="clear-1-2-x"></div>
+       <a href="https://xiarimao.github.io/aspet.github.io/fankui.html"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%8F%8D%E9%A6%88.png" alt="">反馈</a>
+            <div class="clear-1-2-x"></div>    
+       <a href="https://qm.qq.com/q/KZFkRiiCMq"><img id="cblwz-img" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC-%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png" alt="">联系我们</a>
+            <div class="clear-1-2-x"></div>
+        </div>
+      <hr>
+      <script>
+       const bt_pe = document.getElementById('openNav1');
+       const div_pe = document.getElementById('cbldh1');
+   
+       bt_pe.addEventListener('click',function(event){
+         div_pe.style.width = '250px';
+         event.stopPropagation();//阻止冒泡
+       })
+   
+       document.addEventListener('click',function(){
+         div_pe.style.width = '0px';
+       });
+   
+       div_pe.addEventListener('click',function(event){
+         event.stopPropagation();//阻止冒泡
+       })
+   
+       </script>
+      
+  </div>
+  </div>
+  <a href="#db"><button class="btn"  >返回顶部</button></a>
+<body>
+    <script>
+        let arr = ['qiankuang','ghbl','tongkuang']
+        let arrimg = ['https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E9%93%85%E7%9F%BF.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/ghbl.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/copper.png']
+       
+        let Mineralname = ['铅矿','钢化玻璃','铜矿']
+        let geographicposition = ['广泛存在于 赛普罗 等星球的大量地图关卡','无，通过制作获得','广泛存在于赛普罗星等地']
+        let purpose = ['用于建造液体输送和建筑相关的建筑','用于建造液体输送和建筑相关的建筑','用于建造大多数建筑或作为弹药使用']
+        
+        let explode =['0','0','0']
+        let burn = ['0','0','0']
+        let radiate = ['0','0','0']
+        let electro_discharge = ['0','0','0']
+        let elsa = ['致密，惰性，广泛用于电池中。 注意：可能对生命体有毒，虽说这里已经没有多少生物了。','无','铜，塞普罗星上异常丰富的金属,不经处理的话结构很脆弱']
+        // 三个一组
+        let mineral_Unminedcondition = ['https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/qk.png',]
+        let Defensiveunit = ['电弧 海啸','暂无','暂无']
+        // 注意 一个矿物能做的所有建筑为一组！
+        let functionalarchitecture = ['石油钻井 培养机 抽水机 钛传送带 传送带桥 相织布传送带桥 分类器 反向分类器 分配器 溢流门 反向溢流门 质量驱动器 电力节点 大型电力节点 巨浪电力塔 电池 大型电池 火力发电机 热能发电机 涡轮发电机 温差发电机 RTG发电机 太阳能板 大型太阳能板 杜反应堆 冲击反应堆 石墨压缩机 多重压缩机 硅冶炼厂 窑炉 塑钢压缩机 相知布编织器 合金治炼厂 冷冻液混合器 硫化物混合器 爆炸物混合器 熔炉 孢子压缩机 粉碎机 煤炭离心机 焚化炉 维修点 修理投影 超速投影 超速穹顶 力墙投影 次代核心 终代核心 微型处理器 逻辑处理器 超核处理器 逻辑显示屏 大型逻辑显示屏','暂无','暂无']
+        let challenging_unit = ['脉冲地雷 空军工厂 海军工厂 数增级单位重构工厂 倍乘级单位重构工厂 多幂级单位重构工厂 无量级单位重构工厂','暂无','暂无']
+
+
+
+
+
+
+
+
+
+       let arrurl = ['https://xiarimao.github.io/aspet.github.io/mindustry-lead_ore.html','https://xiarimao.github.io/aspet.github.io/mindustry-stalinite.html']
+       for(let i =0; i < arrimg.length;i++){
+       document.write(`<a href="#${arr[i]}"><button class="button button1-x"><img class="img-1" src="${arrimg[i]}" alt=""></button></a>`)
+      
+       
+       
+       }
+       document.write('<hr>')
+      for(let i = 0; i < arr.length; i++){
+
+          document.write(`<div id="${arr[i]}" style = "margin-top: 100px;"><span class="baikexinxi-text">| ${Mineralname[i]}</span>
+
+        <div class="pc">
+  <img class="baikexinxi" style="position: relative;top: -30px;left: 80px;" src="${arrimg[i]}" alt="">
+        </div>
+        <div class="pe">
+  <img class="baikexinxi" style="position: relative;top: -40px;left: 100px;" src="${arrimg[i]}" alt="">
+        </div>
+  <div class="clear11"></div>
+  <span style="margin-left: 10px;"><span style="font-weight: bold;">地理位置：</span>${geographicposition[i]}</span>
+  <br>
+  <br>
+  <span style="margin-left: 10px;"><span style="font-weight: bold;">用途:</span>${purpose[i]}</span>
+  <br>
+  <br>
+  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E7%88%86%E7%82%B8.png" alt=""> 爆炸性:</span><span style="font-weight: bold;color: red;"> ${explode[i]}%</span></span>
+<div class="pe">
+  <br>
+</div>
+  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%9B%BA%E5%AE%9A%E7%87%83%E7%83%A7.png" alt=""> 燃烧性:</span><span style="font-weight: bold;color: red;"> ${burn[i]}%</span></span>
+  <div class="pe">
+    <br>
+  </div>
+  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%94%BE%E5%B0%84.png" alt=""> 放射性:</span><span style="font-weight: bold;color: red;"> ${radiate[i]}%</span></span>
+  <div class="pe">
+    <br>
+  </div>
+  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E7%94%B5.png" alt=""> 放电性:</span><span style="font-weight: bold;color: red;"> ${electro_discharge[i]}%</span></span>
+  <br>
+  <br>
+<div class="pc">
+  <span style=" border-radius: 10px; border: 2px solid black;padding: 5px; margin-left: 10px; font-size: 20px;"><span style="font-weight: bold;"><img style="margin-bottom: 7px;margin-top: 3px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%8F%90%E9%86%92.png" alt=""> 其他（？）:</span><span style="font-weight: bold;color: red;"> ${elsa[i]}</span></span>
+</div>
+<div class="pe">
+  <span style=" border-radius: 10px;padding: 5px; margin-left: 10px; font-size: 20px;"><span style="font-weight: bold;"><img style="margin-bottom: 7px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%8F%90%E9%86%92.png" alt=""> 其他（？）:</span><span style="font-weight: bold;color: red;"> ${elsa[i]}</span></span>
+</div>
+<br>
+<div style="border: 3px solid black;border-radius: 5px;">
+    <div class="pc">
+    <span style="margin-left: 20px; position: relative;top: 10px; font-weight: bold;">${Mineralname[i]}-未开采形态</span>
+    
+    <hr>
+    <img style="margin-top: 10px;margin-left: 400px; border: 2px solid black; border-radius: 2px;width: 400px;height: 120px;" src="${mineral_Unminedcondition[i]}" alt="">
+    </div>
+    <div class="pe">
+    <span style="margin-left: 20px; margin-top: 50px; font-weight: bold;">${Mineralname[i]}-未开采形态</span>
+    <hr>
+    <img style="margin-top: 3px;margin-left: 10px; border: 2px solid black; border-radius: 5px;width: 300px;height: 100px;" src="${mineral_Unminedcondition[i]}" alt="">
+    </div>
+</div>
+<br>
+<div style="border: 3px solid black;border-radius: 5px;">
+    <span style="margin-left: 20px; font-weight: bold;">${Mineralname[i]}-已开采形态</span>
+    <hr>
+    <img style="margin-top: 3px; margin-bottom: 10px; margin-left: 120px; border: 2px solid black; border-radius: 5px;width: 100px;height: 100px;" src="${arrimg[i]}" alt="">
+</div>
+    <br>
+    <br>
+      <div style="border-radius: 5px; border: 3px solid black; font-size: 20px;font-weight: bold;"><span style="font-weight: bold;">参与建造的建筑/单位: </span>
+      <br>
+      <br>
+      <span style="color: red;">防御建筑：</span><p> ${Defensiveunit[i]} </p>
+      <span style="color: red;">功能建筑:</span> <p> ${functionalarchitecture[i]} </p>
+      <span style="color: red;">攻击单位建筑：</span><p> ${challenging_unit[i]} </p>
+
+      </div>
+  </div>
+</div></div><br><br><hr>`)
+
+//    let btn = document.getElementById(arr[is]);
+// 		btn.onclick=function(){
+// 			 //let element = document.getElementById(arr[is]);
+//                //  element.scrollIntoView();
+//              alert(arr[is]);
+// 		}
+}
+    
+      
+    
+
+
+    </script>
+</body>
+</html>

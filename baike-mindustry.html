@@ -181,9 +181,10 @@
             text-align: center;
             float: left;
             margin-left: 10px;
+            margin-top: 10px;
             position: relative;
             left: 300px;
-            top: -90px;
+            top: 10px;
     }
     .bttn:hover{
       background-color: aquamarine;
@@ -201,14 +202,16 @@
       border-radius: 10px;
       outline: none;
       position: relative;
-      top: 20px;
+      top: 100px;
       left: -10px;
     }
     .petext{
         font-weight: bold;
         font-size: 20px;
-        position: relative;
-        top: -30px;
+       position: relative;
+       top: 20px;
+       margin-left: 10px;
+        
     }
     .imgpe{
         width: 80px;
@@ -226,11 +229,15 @@
     .xs{
         display: none;
     }
+    .pc{
+      display: none;
+    }
     }
     </style>
 </head>
 
 <body>
+    
     <div class="dhl">
         <div class="pc">
             <div class="dbdhl">
@@ -366,10 +373,11 @@ for(let i =0; i < arrimg.length;i++){
             let anbh = ['myButton']
         
             for(let adgn = 0; adgn < music.length;adgn++){
-              document.write(`<div class="s">
+              document.write(`<div  class="s">
             <img class='imgpe xs' src="${musicimg}" alt="">
-            <span  style="font-size: 80px;position: relative;top: -10px;">|</span>
-            <span class='petext'>${musictext[adgn]}</span>
+            <span class='pc' style="font-size: 80px;position: relative;top: -15px;">|</span>
+            <span  class='petext'>${musictext[adgn]}</span>
+            <hr style = "position: relative;top: 20px;" class ="pe">
             <audio controls class='music_play'>
             <source src="${music[adgn]}" type="audio/ogg">
           </audio>

@@ -12,6 +12,7 @@
         .clear1{
             width: 100%;
             height: 100px;
+           
         }
         .button {
             background-color: #4CAF50; /* Green */
@@ -101,6 +102,15 @@
         .xinxi-2222{
           font-weight: bold;
         }
+        .ba{
+          margin-top: 3px;
+           margin-bottom: 10px;
+            margin-left: 120px;
+             border: 2px solid black;
+              border-radius: 5px;
+              width: 900px;
+              height: 500px
+        }
         .pe{
           display: none;
         }
@@ -144,6 +154,10 @@
         }
         .xinxi-2222{
           font-weight: bold;
+        }
+        .ba{
+          width: 345px;
+          height: 200px;
         }
         .pc{
           display: none;
@@ -260,26 +274,22 @@
   <a href="#db"><button class="btn"  >返回顶部</button></a>
 <body>
     <script>
-        let arr = ['qiankuang','ghbl','tongkuang']
-        let arrimg = ['https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E9%93%85%E7%9F%BF.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/ghbl.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/copper.png']
-       
-        let Mineralname = ['铅矿','钢化玻璃','铜矿']
-        let geographicposition = ['广泛存在于 赛普罗 等星球的大量地图关卡','无，通过制作获得','广泛存在于赛普罗星等地']
-        let purpose = ['用于建造液体输送和建筑相关的建筑','用于建造液体输送和建筑相关的建筑','用于建造大多数建筑或作为弹药使用']
+        let arr = ['qiankuang','ghbl','tongkuang','shimo','shazi','mt','t','sg','d','fl','lhw','bzj','bzhhw','xzb','b','thw','yhw','w','jlhj']
+        let arrimg = ['https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E9%93%85%E7%9F%BF.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/ghbl.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/copper.png','https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/shimo.png','https://www.freeimg.cn/i/2024/02/03/65be25942c2da.png','https://www.freeimg.cn/i/2024/02/03/65be26846d2c2.png','https://www.freeimg.cn/i/2024/02/03/65be26e403c10.png','https://www.freeimg.cn/i/2024/02/03/65be270096b65.png','https://www.freeimg.cn/i/2024/02/03/65be2742d0104.png','https://www.freeimg.cn/i/2024/02/03/65be2752073cb.png','https://www.freeimg.cn/i/2024/02/03/65be27c4060b4.png','https://www.freeimg.cn/i/2024/02/03/65be27c3e4e5d.png','https://www.freeimg.cn/i/2024/02/03/65be27c40bc51.png','https://www.freeimg.cn/i/2024/02/03/65be27ff83ec0.png','https://www.freeimg.cn/i/2024/02/03/65be2867514d2.png','https://www.freeimg.cn/i/2024/02/03/65be286758dfe.png','https://www.freeimg.cn/i/2024/02/03/65be286757302.png','https://www.freeimg.cn/i/2024/02/03/65be28675793d.png','https://www.freeimg.cn/i/2024/02/03/65be28ef69c3c.png']
+        let Mineralname = ['铅矿','钢化玻璃','铜矿','石墨','沙子','煤炭','钛','塑钢','杜','废料','硫化物','孢子荚 ','爆炸混合物','相织布','铍','碳化物','氧化物','钨','巨浪合金']
+        let geographicposition = ['广泛存在于 赛普罗 等星球的大量地图关卡','无，通过制作获得','广泛存在于赛普罗星等地','无，通过制作获得','广泛存在于 赛普罗 等星球的大量地图关卡','广泛存在于 赛普罗 等星球的大量地图关卡','广泛存在于 赛普罗 等星球的大量地图关卡','无','少量分布于 赛普罗 等星球的大量地图关卡','广泛存在于 赛普罗 等星球的大量地图关卡','无','无','无','无','未知','未知','未知','无','无']
+        let purpose = ['用于建造液体输送和建筑相关的建筑','用于建造液体输送和建筑相关的建筑','用于建造大多数建筑或作为弹药使用','用于制作电子元件或作为炮弹使用','用于生产其他精炼材料','用作燃料或用于生产其他精炼材料','用于液体输送建筑钻头和工厂','用于高级单位绝缘材料或作为分裂性弹药','用于耐用建筑和核燃料','用于在熔炉和粉碎机中精炼其他材料','用于火焰发射类武器和使用燃料的发电设备','用于转化成石油爆炸混合物或作为燃料','用作炸弹或爆炸性弹药','用于高级电子设备和自修复建筑','用于埃里克尔的多种建筑和弹药','用于先进的建筑，重型单位和弹药','用作热导体和绝缘体','用于钻头装甲和弹药','用于先进武器和反应防御建筑']
         
-        let explode =['0','0','0']
-        let burn = ['0','0','0']
-        let radiate = ['0','0','0']
-        let electro_discharge = ['0','0','0']
-        let elsa = ['致密，惰性，广泛用于电池中。 注意：可能对生命体有毒，虽说这里已经没有多少生物了。','无','铜，塞普罗星上异常丰富的金属,不经处理的话结构很脆弱']
+
+        let explode =['0','0','0','0','0','20','0','20','20','0','40','0','120','0','0','0','0','0','0']
+        let burn = ['0','0','0','0','0','100','0','10','0','0','140','115','40','0','0','0','0','0','0']
+        let radiate = ['0','0','0','0','0','0','0','0','100','0','0','0','0','60','0','0','0','0','0']
+        let electro_discharge = ['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','75']
+        let elsa = ['致密，惰性，广泛用于电池中。 注意：可能对生命体有毒，虽说这里已经没有多少生物了。','无','铜，塞普罗星上异常丰富的金属,不经处理的话结构很脆弱','无','无','暂无','无','无','无','暂无','无','暂无','无','无','无','无','无','无','无']
         // 三个一组
-        let mineral_Unminedcondition = ['https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/qk.png',]
-        let Defensiveunit = ['电弧 海啸','暂无','暂无']
-        // 注意 一个矿物能做的所有建筑为一组！
-        let functionalarchitecture = ['石油钻井 培养机 抽水机 钛传送带 传送带桥 相织布传送带桥 分类器 反向分类器 分配器 溢流门 反向溢流门 质量驱动器 电力节点 大型电力节点 巨浪电力塔 电池 大型电池 火力发电机 热能发电机 涡轮发电机 温差发电机 RTG发电机 太阳能板 大型太阳能板 杜反应堆 冲击反应堆 石墨压缩机 多重压缩机 硅冶炼厂 窑炉 塑钢压缩机 相知布编织器 合金治炼厂 冷冻液混合器 硫化物混合器 爆炸物混合器 熔炉 孢子压缩机 粉碎机 煤炭离心机 焚化炉 维修点 修理投影 超速投影 超速穹顶 力墙投影 次代核心 终代核心 微型处理器 逻辑处理器 超核处理器 逻辑显示屏 大型逻辑显示屏','暂无','暂无']
-        let challenging_unit = ['脉冲地雷 空军工厂 海军工厂 数增级单位重构工厂 倍乘级单位重构工厂 多幂级单位重构工厂 无量级单位重构工厂','暂无','暂无']
-
-
+        let mineral_Unminedcondition = ['https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/qk.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be384a9fa62.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be393ab0274.png','https://www.freeimg.cn/i/2024/02/03/65be39bd2401d.png','https://www.freeimg.cn/i/2024/02/03/65be39d41ec6e.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be39fd95a9b.png','https://www.freeimg.cn/i/2024/02/03/65be3a158e7fd.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png']
+        let hq = ['https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be2068373c5.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be23109b86d.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be2e2892cc3.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be2fedb8684.png','https://www.freeimg.cn/i/2024/02/03/65be305c11a52.png','https://www.freeimg.cn/i/2024/02/03/65be3212469d5.png','https://www.freeimg.cn/i/2024/02/03/65be3341e1a17.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be35cb55b8d.png']
+        let wzjc = ['无','通过窑炉获得，向窑炉输入 铅矿 沙子并 连接电路，注：演示图片中输出沙子铅矿和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','无','石墨压缩机：输入煤炭后压缩并输出石墨  多重石墨压缩机： 输入 煤炭 水 并连接电路可获得双倍于石墨压缩机所输出的石墨且速率有提升  注：演示图片中输出煤炭水和电源的为沙盒模式下的电力源物品源液体源 生存模式下无法获得！','无','无','无','输入 石油 钛 并连接电路 注：演示图片中输出钛石油和电源的为沙盒模式下的电力源物品源液体源 生存模式下无法获得！','无','无','输入 煤炭 铅矿 沙子 并连接电路以获得注：演示图片中输出煤炭沙子铅矿和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','向 孢子压缩机 输入 水 并连接电路以获得注：演示图片中输出水和电源的为沙盒模式下的电力源液体源 生存模式下无法获得！','输入 硫化物 孢子荚 并连接电路以获得 注：演示图片中输出硫化物孢子荚和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','输入 杜 沙子 并连接电路以获得 注：演示图片中输出沙子杜和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','未知','未知','未知','未知','输入铜矿，铅矿，钛 硅矿 并连接电路以获得 注：演示图片中输出硫化物孢子荚和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！']
 
 
 
@@ -339,7 +349,7 @@
     <span style="margin-left: 20px; position: relative;top: 10px; font-weight: bold;">${Mineralname[i]}-未开采形态</span>
     
     <hr>
-    <img style="margin-top: 10px;margin-left: 400px; border: 2px solid black; border-radius: 2px;width: 400px;height: 120px;" src="${mineral_Unminedcondition[i]}" alt="">
+    <img style="margin-top: 10px;margin-left: 400px; border: 2px solid black; border-radius: 2px;width: 400px;height: 200px;" src="${mineral_Unminedcondition[i]}" alt="">
     </div>
     <div class="pe">
     <span style="margin-left: 20px; margin-top: 50px; font-weight: bold;">${Mineralname[i]}-未开采形态</span>
@@ -353,16 +363,17 @@
     <hr>
     <img style="margin-top: 3px; margin-bottom: 10px; margin-left: 120px; border: 2px solid black; border-radius: 5px;width: 100px;height: 100px;" src="${arrimg[i]}" alt="">
 </div>
+<br>
+<br>
+<div style="border: 3px solid black;border-radius: 5px;">
+    <span style="margin-left: 20px; font-weight: bold;">${Mineralname[i]}-制作过程</span>
+    <hr>
+    <img class="ba" src="${hq[i]}" alt="">
+    <br>
+    <span style="margin-left: 20px; font-weight: bold;">${wzjc[i]}</span>
+</div>
     <br>
     <br>
-      <div style="border-radius: 5px; border: 3px solid black; font-size: 20px;font-weight: bold;"><span style="font-weight: bold;">参与建造的建筑/单位: </span>
-      <br>
-      <br>
-      <span style="color: red;">防御建筑：</span><p> ${Defensiveunit[i]} </p>
-      <span style="color: red;">功能建筑:</span> <p> ${functionalarchitecture[i]} </p>
-      <span style="color: red;">攻击单位建筑：</span><p> ${challenging_unit[i]} </p>
-
-      </div>
   </div>
 </div></div><br><br><hr>`)
 

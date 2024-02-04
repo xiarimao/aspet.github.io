@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>百科页面</title>
+    <title>ASPET-Mindustry-百科页面-矿物</title>
     <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/becommon.css">
     <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/dhl.css">
     <link rel="icon" href="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/aspet_logo_new_1.ico" type="image/x-icon" sizes="128x128">
@@ -75,13 +75,23 @@
           box-shadow: 3px 3px 3px black;
           transition: all 0.2s linear;
         }
+        
     </style>
     <style>
       @media only screen and (orientation: landscape) {
         .baikexinxi-text{
-          margin-left: -10px;
+          margin-left: 10px;
           font-size: 20px;
           font-weight: bold;
+          margin-top: 10px;
+      
+        }
+        .baikexinxi-img{
+          width: 100px;
+          height: 100px;
+          border: 3px solid darkgray;
+          border-radius: 10px;
+          margin-top: 20px;
         }
         .clear11{
           width: 100%;
@@ -110,6 +120,14 @@
               border-radius: 5px;
               width: 900px;
               height: 500px
+        }
+        .kwxxym{
+          width: 98%;
+          height: 1500px;
+          background-color: whitesmoke;
+          border-radius: 10px; 
+          box-shadow: 3px 3px 3px #888888;
+          margin: 0px auto;
         }
         .pe{
           display: none;
@@ -159,6 +177,56 @@
           width: 345px;
           height: 200px;
         }
+        .baikexinxi-text{
+          margin-left: 10px;
+          font-size: 20px;
+          font-weight: bold;
+          margin-top: 10px;
+      
+        }
+        .baikexinxi-img{
+          width: 100px;
+          height: 100px;
+          border: 3px solid darkgray;
+          border-radius: 10px;
+          margin-top: 20px;
+          margin-left: 100px;
+        }
+        #jlt{
+          width: 100%;
+          height: 155px;
+          background-color: seashell;
+          border-radius: 10px;
+          box-shadow: 3px 3px 3px #888888;
+          margin-bottom: 20px;
+          transition: all 0.2s linear;
+          overflow: hidden
+          
+            
+        }
+        .btn1{
+          position: absolute;
+          right: 10px;
+          top: 500px;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          border: 0px;
+          background-color: white;
+          box-shadow: 3px 3px 3px #888888;
+          transition: all 0.2s linear;
+          position: fixed;
+            img{
+              width: 30px;
+              height: 30px;
+            }
+
+        }
+        .btn1:hover{
+          box-shadow: 3px 3px 3px black;
+          transition: all 0.2s linear;
+            
+        }
         .pc{
           display: none;
         }
@@ -167,7 +235,28 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
     </style> 
+    <script>
+      let arr = ['qiankuang','ghbl','tongkuang','shimo','shazi','mt','t','sg','d','fl','lhw','bzj','bzhhw','xzb','b','thw','yhw','w','jlhj']
+      let arrimg = ['https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E9%93%85%E7%9F%BF.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/ghbl.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/copper.png','https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/shimo.png','https://www.freeimg.cn/i/2024/02/03/65be25942c2da.png','https://www.freeimg.cn/i/2024/02/03/65be26846d2c2.png','https://www.freeimg.cn/i/2024/02/03/65be26e403c10.png','https://www.freeimg.cn/i/2024/02/03/65be270096b65.png','https://www.freeimg.cn/i/2024/02/03/65be2742d0104.png','https://www.freeimg.cn/i/2024/02/03/65be2752073cb.png','https://www.freeimg.cn/i/2024/02/03/65be27c4060b4.png','https://www.freeimg.cn/i/2024/02/03/65be27c3e4e5d.png','https://www.freeimg.cn/i/2024/02/03/65be27c40bc51.png','https://www.freeimg.cn/i/2024/02/03/65be27ff83ec0.png','https://www.freeimg.cn/i/2024/02/03/65be2867514d2.png','https://www.freeimg.cn/i/2024/02/03/65be286758dfe.png','https://www.freeimg.cn/i/2024/02/03/65be286757302.png','https://www.freeimg.cn/i/2024/02/03/65be28675793d.png','https://www.freeimg.cn/i/2024/02/03/65be28ef69c3c.png']
+      let Mineralname = ['铅矿','钢化玻璃','铜矿','石墨','沙子','煤炭','钛','塑钢','杜','废料','硫化物','孢子荚 ','爆炸混合物','相织布','铍','碳化物','氧化物','钨','巨浪合金']
+      let geographicposition = ['广泛存在于 赛普罗 等星球的大量地图关卡','无，通过制作获得','广泛存在于赛普罗星等地','无，通过制作获得','广泛存在于 赛普罗 等星球的大量地图关卡','广泛存在于 赛普罗 等星球的大量地图关卡','广泛存在于 赛普罗 等星球的大量地图关卡','无','少量分布于 赛普罗 等星球的大量地图关卡','广泛存在于 赛普罗 等星球的大量地图关卡','无','无','无','无','未知','未知','未知','无','无']
+      let purpose = ['用于建造液体输送和建筑相关的建筑','用于建造液体输送和建筑相关的建筑','用于建造大多数建筑或作为弹药使用','用于制作电子元件或作为炮弹使用','用于生产其他精炼材料','用作燃料或用于生产其他精炼材料','用于液体输送建筑钻头和工厂','用于高级单位绝缘材料或作为分裂性弹药','用于耐用建筑和核燃料','用于在熔炉和粉碎机中精炼其他材料','用于火焰发射类武器和使用燃料的发电设备','用于转化成石油爆炸混合物或作为燃料','用作炸弹或爆炸性弹药','用于高级电子设备和自修复建筑','用于埃里克尔的多种建筑和弹药','用于先进的建筑，重型单位和弹药','用作热导体和绝缘体','用于钻头装甲和弹药','用于先进武器和反应防御建筑']
+      
+
+      let explode =['0','0','0','0','0','20','0','20','20','0','40','0','120','0','0','0','0','0','0']
+      let burn = ['0','0','0','0','0','100','0','10','0','0','140','115','40','0','0','0','0','0','0']
+      let radiate = ['0','0','0','0','0','0','0','0','100','0','0','0','0','60','0','0','0','0','0']
+      let electro_discharge = ['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','75']
+      let elsa = ['致密，惰性，广泛用于电池中。 注意：可能对生命体有毒，虽说这里已经没有多少生物了。','无','铜，塞普罗星上异常丰富的金属,不经处理的话结构很脆弱','无','无','暂无','无','无','无','暂无','无','暂无','无','无','无','无','无','无','无']
+      // 三个一组
+      let mineral_Unminedcondition = ['https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/qk.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be384a9fa62.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be393ab0274.png','https://www.freeimg.cn/i/2024/02/03/65be39bd2401d.png','https://www.freeimg.cn/i/2024/02/03/65be39d41ec6e.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be39fd95a9b.png','https://www.freeimg.cn/i/2024/02/03/65be3a158e7fd.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png']
+      let hq = ['https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be2068373c5.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be23109b86d.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be2e2892cc3.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be2fedb8684.png','https://www.freeimg.cn/i/2024/02/03/65be305c11a52.png','https://www.freeimg.cn/i/2024/02/03/65be3212469d5.png','https://www.freeimg.cn/i/2024/02/03/65be3341e1a17.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be35cb55b8d.png']
+      let wzjc = ['无','通过窑炉获得，向窑炉输入 铅矿 沙子并 连接电路，注：演示图片中输出沙子铅矿和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','无','石墨压缩机：输入煤炭后压缩并输出石墨  多重石墨压缩机： 输入 煤炭 水 并连接电路可获得双倍于石墨压缩机所输出的石墨且速率有提升  注：演示图片中输出煤炭水和电源的为沙盒模式下的电力源物品源液体源 生存模式下无法获得！','无','无','无','输入 石油 钛 并连接电路 注：演示图片中输出钛石油和电源的为沙盒模式下的电力源物品源液体源 生存模式下无法获得！','无','无','输入 煤炭 铅矿 沙子 并连接电路以获得注：演示图片中输出煤炭沙子铅矿和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','向 孢子压缩机 输入 水 并连接电路以获得注：演示图片中输出水和电源的为沙盒模式下的电力源液体源 生存模式下无法获得！','输入 硫化物 孢子荚 并连接电路以获得 注：演示图片中输出硫化物孢子荚和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','输入 杜 沙子 并连接电路以获得 注：演示图片中输出沙子杜和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','未知','未知','未知','未知','输入铜矿，铅矿，钛 硅矿 并连接电路以获得 注：演示图片中输出硫化物孢子荚和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！']
+
+    </script>
+     
 </head>
+
 <div id="db" class="dhl">
   <div class="pc">
       <div class="dbdhl">
@@ -271,111 +360,123 @@
       
   </div>
   </div>
+  <div id="jlt">
+    <button style="position: absolute;left: 300px;top: 120px;" class="btn1 pe" id="zk">展开</button>
+    <script>
+      const bt1 = document.getElementById('zk');
+      const div1 = document.getElementById('jlt');
+  
+      bt1.addEventListener('click',function(event){
+        div1.style.height = '550px';
+        div1.style.transition = 'all 0.2s linner';
+        event.stopPropagation();//阻止冒泡
+      })
+  
+      document.addEventListener('click',function(){
+        div1.style.height = '300px';
+      });
+  
+      div1.addEventListener('click',function(event){
+        event.stopPropagation();//阻止冒泡
+      })
+  
+      </script>
+    <script>
+        for(let i =0; i < arrimg.length;i++){
+   document.write(`<a href="#${arr[i]}"><button class="button button1-x"><img class="img-1" src="${arrimg[i]}" alt=""></button></a>`)
+  
+   
+   
+   }
+    </script>
+  </div>
   <a href="#db"><button class="btn"  >返回顶部</button></a>
 <body>
-    <script>
-        let arr = ['qiankuang','ghbl','tongkuang','shimo','shazi','mt','t','sg','d','fl','lhw','bzj','bzhhw','xzb','b','thw','yhw','w','jlhj']
-        let arrimg = ['https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/%E9%93%85%E7%9F%BF.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/ghbl.png','https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/copper.png','https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/shimo.png','https://www.freeimg.cn/i/2024/02/03/65be25942c2da.png','https://www.freeimg.cn/i/2024/02/03/65be26846d2c2.png','https://www.freeimg.cn/i/2024/02/03/65be26e403c10.png','https://www.freeimg.cn/i/2024/02/03/65be270096b65.png','https://www.freeimg.cn/i/2024/02/03/65be2742d0104.png','https://www.freeimg.cn/i/2024/02/03/65be2752073cb.png','https://www.freeimg.cn/i/2024/02/03/65be27c4060b4.png','https://www.freeimg.cn/i/2024/02/03/65be27c3e4e5d.png','https://www.freeimg.cn/i/2024/02/03/65be27c40bc51.png','https://www.freeimg.cn/i/2024/02/03/65be27ff83ec0.png','https://www.freeimg.cn/i/2024/02/03/65be2867514d2.png','https://www.freeimg.cn/i/2024/02/03/65be286758dfe.png','https://www.freeimg.cn/i/2024/02/03/65be286757302.png','https://www.freeimg.cn/i/2024/02/03/65be28675793d.png','https://www.freeimg.cn/i/2024/02/03/65be28ef69c3c.png']
-        let Mineralname = ['铅矿','钢化玻璃','铜矿','石墨','沙子','煤炭','钛','塑钢','杜','废料','硫化物','孢子荚 ','爆炸混合物','相织布','铍','碳化物','氧化物','钨','巨浪合金']
-        let geographicposition = ['广泛存在于 赛普罗 等星球的大量地图关卡','无，通过制作获得','广泛存在于赛普罗星等地','无，通过制作获得','广泛存在于 赛普罗 等星球的大量地图关卡','广泛存在于 赛普罗 等星球的大量地图关卡','广泛存在于 赛普罗 等星球的大量地图关卡','无','少量分布于 赛普罗 等星球的大量地图关卡','广泛存在于 赛普罗 等星球的大量地图关卡','无','无','无','无','未知','未知','未知','无','无']
-        let purpose = ['用于建造液体输送和建筑相关的建筑','用于建造液体输送和建筑相关的建筑','用于建造大多数建筑或作为弹药使用','用于制作电子元件或作为炮弹使用','用于生产其他精炼材料','用作燃料或用于生产其他精炼材料','用于液体输送建筑钻头和工厂','用于高级单位绝缘材料或作为分裂性弹药','用于耐用建筑和核燃料','用于在熔炉和粉碎机中精炼其他材料','用于火焰发射类武器和使用燃料的发电设备','用于转化成石油爆炸混合物或作为燃料','用作炸弹或爆炸性弹药','用于高级电子设备和自修复建筑','用于埃里克尔的多种建筑和弹药','用于先进的建筑，重型单位和弹药','用作热导体和绝缘体','用于钻头装甲和弹药','用于先进武器和反应防御建筑']
-        
-
-        let explode =['0','0','0','0','0','20','0','20','20','0','40','0','120','0','0','0','0','0','0']
-        let burn = ['0','0','0','0','0','100','0','10','0','0','140','115','40','0','0','0','0','0','0']
-        let radiate = ['0','0','0','0','0','0','0','0','100','0','0','0','0','60','0','0','0','0','0']
-        let electro_discharge = ['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','75']
-        let elsa = ['致密，惰性，广泛用于电池中。 注意：可能对生命体有毒，虽说这里已经没有多少生物了。','无','铜，塞普罗星上异常丰富的金属,不经处理的话结构很脆弱','无','无','暂无','无','无','无','暂无','无','暂无','无','无','无','无','无','无','无']
-        // 三个一组
-        let mineral_Unminedcondition = ['https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/qk.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be384a9fa62.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be393ab0274.png','https://www.freeimg.cn/i/2024/02/03/65be39bd2401d.png','https://www.freeimg.cn/i/2024/02/03/65be39d41ec6e.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be39fd95a9b.png','https://www.freeimg.cn/i/2024/02/03/65be3a158e7fd.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be252b4c21f.png']
-        let hq = ['https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be2068373c5.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be23109b86d.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be2e2892cc3.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be20dfdc280.png','https://www.freeimg.cn/i/2024/02/03/65be2fedb8684.png','https://www.freeimg.cn/i/2024/02/03/65be305c11a52.png','https://www.freeimg.cn/i/2024/02/03/65be3212469d5.png','https://www.freeimg.cn/i/2024/02/03/65be3341e1a17.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be34580987a.png','https://www.freeimg.cn/i/2024/02/03/65be35cb55b8d.png']
-        let wzjc = ['无','通过窑炉获得，向窑炉输入 铅矿 沙子并 连接电路，注：演示图片中输出沙子铅矿和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','无','石墨压缩机：输入煤炭后压缩并输出石墨  多重石墨压缩机： 输入 煤炭 水 并连接电路可获得双倍于石墨压缩机所输出的石墨且速率有提升  注：演示图片中输出煤炭水和电源的为沙盒模式下的电力源物品源液体源 生存模式下无法获得！','无','无','无','输入 石油 钛 并连接电路 注：演示图片中输出钛石油和电源的为沙盒模式下的电力源物品源液体源 生存模式下无法获得！','无','无','输入 煤炭 铅矿 沙子 并连接电路以获得注：演示图片中输出煤炭沙子铅矿和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','向 孢子压缩机 输入 水 并连接电路以获得注：演示图片中输出水和电源的为沙盒模式下的电力源液体源 生存模式下无法获得！','输入 硫化物 孢子荚 并连接电路以获得 注：演示图片中输出硫化物孢子荚和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','输入 杜 沙子 并连接电路以获得 注：演示图片中输出沙子杜和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！','未知','未知','未知','未知','输入铜矿，铅矿，钛 硅矿 并连接电路以获得 注：演示图片中输出硫化物孢子荚和电源的为沙盒模式下的电力源物品源 生存模式下无法获得！']
-
-
-
-
-
-
-
-       let arrurl = ['https://xiarimao.github.io/aspet.github.io/mindustry-lead_ore.html','https://xiarimao.github.io/aspet.github.io/mindustry-stalinite.html']
-       for(let i =0; i < arrimg.length;i++){
-       document.write(`<a href="#${arr[i]}"><button class="button button1-x"><img class="img-1" src="${arrimg[i]}" alt=""></button></a>`)
+  <script>
       
-       
-       
-       }
-       document.write('<hr>')
-      for(let i = 0; i < arr.length; i++){
 
-          document.write(`<div id="${arr[i]}" style = "margin-top: 100px;"><span class="baikexinxi-text">| ${Mineralname[i]}</span>
-
-        <div class="pc">
-  <img class="baikexinxi" style="position: relative;top: -30px;left: 80px;" src="${arrimg[i]}" alt="">
-        </div>
-        <div class="pe">
-  <img class="baikexinxi" style="position: relative;top: -40px;left: 100px;" src="${arrimg[i]}" alt="">
-        </div>
-  <div class="clear11"></div>
-  <span style="margin-left: 10px;"><span style="font-weight: bold;">地理位置：</span>${geographicposition[i]}</span>
-  <br>
-  <br>
-  <span style="margin-left: 10px;"><span style="font-weight: bold;">用途:</span>${purpose[i]}</span>
-  <br>
-  <br>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E7%88%86%E7%82%B8.png" alt=""> 爆炸性:</span><span style="font-weight: bold;color: red;"> ${explode[i]}%</span></span>
-<div class="pe">
-  <br>
-</div>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%9B%BA%E5%AE%9A%E7%87%83%E7%83%A7.png" alt=""> 燃烧性:</span><span style="font-weight: bold;color: red;"> ${burn[i]}%</span></span>
-  <div class="pe">
-    <br>
-  </div>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%94%BE%E5%B0%84.png" alt=""> 放射性:</span><span style="font-weight: bold;color: red;"> ${radiate[i]}%</span></span>
-  <div class="pe">
-    <br>
-  </div>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E7%94%B5.png" alt=""> 放电性:</span><span style="font-weight: bold;color: red;"> ${electro_discharge[i]}%</span></span>
-  <br>
-  <br>
-<div class="pc">
-  <span style=" border-radius: 10px; border: 2px solid black;padding: 5px; margin-left: 10px; font-size: 20px;"><span style="font-weight: bold;"><img style="margin-bottom: 7px;margin-top: 3px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%8F%90%E9%86%92.png" alt=""> 其他（？）:</span><span style="font-weight: bold;color: red;"> ${elsa[i]}</span></span>
-</div>
-<div class="pe">
-  <span style=" border-radius: 10px;padding: 5px; margin-left: 10px; font-size: 20px;"><span style="font-weight: bold;"><img style="margin-bottom: 7px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%8F%90%E9%86%92.png" alt=""> 其他（？）:</span><span style="font-weight: bold;color: red;"> ${elsa[i]}</span></span>
-</div>
-<br>
-<div style="border: 3px solid black;border-radius: 5px;">
-    <div class="pc">
-    <span style="margin-left: 20px; position: relative;top: 10px; font-weight: bold;">${Mineralname[i]}-未开采形态</span>
     
-    <hr>
-    <img style="margin-top: 10px;margin-left: 400px; border: 2px solid black; border-radius: 2px;width: 400px;height: 200px;" src="${mineral_Unminedcondition[i]}" alt="">
+
+
+
+
+   let arrurl = ['https://xiarimao.github.io/aspet.github.io/mindustry-lead_ore.html','https://xiarimao.github.io/aspet.github.io/mindustry-stalinite.html']
+   
+   document.write('<hr>')
+  for(let i = 0; i < arr.length; i++){
+
+      document.write(`<div class="kwxxym"><div id="${arr[i]}" style = "margin-top: 100px;"><span class="baikexinxi-text">| ${Mineralname[i]}</span>
+
+    <div class="pc">
+<img class="baikexinxi-img" style="position: relative;top: -30px;left: 1200px;" src="${arrimg[i]}" alt="">
     </div>
     <div class="pe">
-    <span style="margin-left: 20px; margin-top: 50px; font-weight: bold;">${Mineralname[i]}-未开采形态</span>
-    <hr>
-    <img style="margin-top: 3px;margin-left: 10px; border: 2px solid black; border-radius: 5px;width: 300px;height: 100px;" src="${mineral_Unminedcondition[i]}" alt="">
+<img class="baikexinxi-img" style="position: relative;top: -40px;left: 100px;" src="${arrimg[i]}" alt="">
     </div>
+<div class="clear11"></div>
+<span style="margin-left: 10px;"><span style="font-weight: bold;">地理位置：</span>${geographicposition[i]}</span>
+<br>
+<br>
+<span style="margin-left: 10px;"><span style="font-weight: bold;">用途:</span>${purpose[i]}</span>
+<br>
+<br>
+<span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E7%88%86%E7%82%B8.png" alt=""> 爆炸性:</span><span style="font-weight: bold;color: red;"> ${explode[i]}%</span></span>
+<div class="pe">
+<br>
+</div>
+<span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%9B%BA%E5%AE%9A%E7%87%83%E7%83%A7.png" alt=""> 燃烧性:</span><span style="font-weight: bold;color: red;"> ${burn[i]}%</span></span>
+<div class="pe">
+<br>
+</div>
+<span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%94%BE%E5%B0%84.png" alt=""> 放射性:</span><span style="font-weight: bold;color: red;"> ${radiate[i]}%</span></span>
+<div class="pe">
+<br>
+</div>
+<span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E7%94%B5.png" alt=""> 放电性:</span><span style="font-weight: bold;color: red;"> ${electro_discharge[i]}%</span></span>
+<br>
+<br>
+<div class="pc">
+<span style=" border-radius: 10px; border: 2px solid black;padding: 5px; margin-left: 10px; font-size: 20px;"><span style="font-weight: bold;"><img style="margin-bottom: 7px;margin-top: 3px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%8F%90%E9%86%92.png" alt=""> 其他（？）:</span><span style="font-weight: bold;color: red;"> ${elsa[i]}</span></span>
+</div>
+<div class="pe">
+<span style=" border-radius: 10px;padding: 5px; margin-left: 10px; font-size: 20px;"><span style="font-weight: bold;"><img style="margin-bottom: 7px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%8F%90%E9%86%92.png" alt=""> 其他（？）:</span><span style="font-weight: bold;color: red;"> ${elsa[i]}</span></span>
 </div>
 <br>
 <div style="border: 3px solid black;border-radius: 5px;">
-    <span style="margin-left: 20px; font-weight: bold;">${Mineralname[i]}-已开采形态</span>
-    <hr>
-    <img style="margin-top: 3px; margin-bottom: 10px; margin-left: 120px; border: 2px solid black; border-radius: 5px;width: 100px;height: 100px;" src="${arrimg[i]}" alt="">
+<div class="pc">
+<span style="margin-left: 20px; position: relative;top: 10px; font-weight: bold;">${Mineralname[i]}-未开采形态</span>
+
+<hr>
+<img style="margin-top: 10px;margin-left: 400px; border: 2px solid black; border-radius: 2px;width: 400px;height: 200px;" src="${mineral_Unminedcondition[i]}" alt="">
+</div>
+<div class="pe">
+<span style="margin-left: 20px; margin-top: 50px; font-weight: bold;">${Mineralname[i]}-未开采形态</span>
+<hr>
+<img style="margin-top: 3px;margin-left: 10px; border: 2px solid black; border-radius: 5px;width: 300px;height: 100px;" src="${mineral_Unminedcondition[i]}" alt="">
+</div>
+</div>
+<br>
+<div style="border: 3px solid black;border-radius: 5px;">
+<span style="margin-left: 20px; font-weight: bold;">${Mineralname[i]}-已开采形态/已制作形态</span>
+<hr>
+<img style="margin-top: 3px; margin-bottom: 10px; margin-left: 120px; border: 2px solid black; border-radius: 5px;width: 100px;height: 100px;" src="${arrimg[i]}" alt="">
 </div>
 <br>
 <br>
 <div style="border: 3px solid black;border-radius: 5px;">
-    <span style="margin-left: 20px; font-weight: bold;">${Mineralname[i]}-制作过程</span>
-    <hr>
-    <img class="ba" src="${hq[i]}" alt="">
-    <br>
-    <span style="margin-left: 20px; font-weight: bold;">${wzjc[i]}</span>
+<span style="margin-left: 20px; font-weight: bold;">${Mineralname[i]}-制作过程</span>
+<hr>
+<img class="ba" src="${hq[i]}" alt="">
+<br>
+<span style="margin-left: 20px; font-weight: bold;">${wzjc[i]}</span>
 </div>
-    <br>
-    <br>
-  </div>
-</div></div><br><br><hr>`)
+<br>
+<br>
+</div>
+</div>
+</div>
+</div>
+<br><br><hr>`)
 
 //    let btn = document.getElementById(arr[is]);
 // 		btn.onclick=function(){
@@ -384,11 +485,11 @@
 //              alert(arr[is]);
 // 		}
 }
-    
-      
-    
+
+  
 
 
-    </script>
+
+</script>
 </body>
 </html>

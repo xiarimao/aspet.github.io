@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/becommon.css">
-    <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/dhl.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <script type="text/javascript" src="https://aspetattachments.wdfiles.com/local--files/github-page/test-136.js"></script>
+    <button onclick="btn()">1</button>
+    <button onclick="btn2()">2</button>
+<script>
+    let arr = ['asd','bdf','hjg']
+    function btn(){
+        arr.push(prompt('输入'))
+        console.log(arr);
+    }
+    function btn2(){
+        document.write(arr);
+    }
+</script>
 </body>
 </html>
-

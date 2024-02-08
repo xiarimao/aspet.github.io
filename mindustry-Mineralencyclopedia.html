@@ -192,7 +192,7 @@
           margin-top: 20px;
           margin-left: 100px;
         }
-        #jlt{
+        .jlt{
           width: 100%;
           height: 155px;
           background-color: seashell;
@@ -360,25 +360,22 @@
       
   </div>
   </div>
-  <div id="jlt">
+  <div class="jlt">
     <button style="position: absolute;left: 300px;top: 300px;" class="btn1 pe" id="zk">展开</button>
     <script>
-      const bt1 = document.getElementById('zk');
-      const div1 = document.getElementById('jlt');
-  
-      bt1.addEventListener('click',function(event){
-        div1.style.height = '550px';
-        div1.style.transition = 'all 0.2s linner';
-        event.stopPropagation();//阻止冒泡
-      })
-  
-      document.addEventListener('click',function(){
-        div1.style.height = '155px';
-      });
-  
-      div1.addEventListener('click',function(event){
-        event.stopPropagation();//阻止冒泡
-      })
+      let i = 0
+        let div1 = document.querySelector('.jlt')
+        document.querySelector('.btn1').addEventListener('click',() => {
+            i++
+            if(i === 1){
+                div1.style.height = '550px';
+                div1.style.transition = 'all 0.2s linner';
+            }else if(i === 2){
+                div1.style.height = '155px';
+                div1.style.transition = 'all 0.2s linner';
+                i = 0
+            }
+        })
   
       </script>
     <script>

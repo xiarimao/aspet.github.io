@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASPET-Mindustry-百科页面-矿物</title>
+    <title>百科页面</title>
     <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/becommon.css">
     <link rel="stylesheet" href="https://aspetattachments.wdfiles.com/local--files/system%3Awelcome/dhl.css">
     <link rel="icon" href="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/aspet_logo_new_1.ico" type="image/x-icon" sizes="128x128">
@@ -114,19 +114,50 @@
           font-weight: bold;
         }
         .scp{
-          width: 98%;
-          height: 1300px;
+          width: 1370px;
+          height: 1730px;
           background-color: #ededed;
+          margin: 0px auto;
           border-radius: 10px;
           box-shadow: 3px 3px 3px #888888;
-          margin: 0px auto;
+          
         }
+        .bain{
+          border: 5px solid black;
+          border-radius: 10px;
+          height: 650px;
+          margin-right: 15px;
+           img{
+            width: 30px;
+            height: 30px;          
+            font-weight: bold;
+            vertical-align:middle
+           }
+           svg{
+            width: 30px;
+            height: 30px;          
+            font-weight: bold;
+            vertical-align:middle
+           }
+        }
+    
+        
         .pe{
           display: none;
         }
         .pc1 img{
           width: 25px;
           height: 25px;
+        }
+       
+        table{
+            border-collapse: collapse;
+            height: 50px;
+            width: 1300px;
+            text-align: center;
+        }
+        th{
+            padding: 22px 90px;
         }
       }
           @media only screen and (max-width: 768px) {
@@ -169,6 +200,37 @@
         .xinxi-2222{
           font-weight: bold;
         }
+        .bain{
+          border: 5px solid black;
+          border-radius: 10px;
+          height: 1200px;
+          margin-right: 15px;
+           img{
+            width: 30px;
+            height: 30px;          
+            font-weight: bold;
+            vertical-align:middle
+           }
+           svg{
+            width: 30px;
+            height: 30px;          
+            font-weight: bold;
+            vertical-align:middle
+           }
+        }
+        table{
+            border-collapse: collapse;
+            height: 50px;
+            width: 300px;
+            text-align: center;
+        }
+        th{
+            padding: 30px 10px;
+           
+        }
+        tr{
+          clear: both;
+        }
         .pc{
           display: none;
           
@@ -180,9 +242,15 @@
           
         }
           }
-          body{
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    }
+          span{
+            font-size: 20px;
+            font-weight: bold;
+          }
+          .bain-text{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+          }
+          
+         
     </style> 
 </head>
 
@@ -290,17 +358,19 @@
   </div>
   </div>
   <a href="#db"><button class="btn"  >返回顶部</button></a>
+  
+
+
+
 <body>
     <script>
         let arr = ['qiankuang','ghbl','tongkuang','quanzhang','wz']
         let arrimg = ['https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%B0%96%E5%88%80.png','https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%98%E9%94%A4.png','https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%A0%A1%E5%9E%92.png','https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%9D%83%E6%9D%96.png','https://www.freeimg.cn/i/2024/02/04/65bf293b2c2ad.png']
        
         let Mineralname = ['尖刀','战锤','堡垒','权杖','王座']
-        let geographicposition = ['广泛存在于 赛普罗 等星球的大量地图关卡','无，通过制作获得','广泛存在于赛普罗星等地']
         let purpose = ['向敌人发射标准子弹','向敌人喷射火焰','向地面敌人发射远程火炮','向敌人快速发射带电子弹','向敌人快速发射大型穿透子弹']
         
         
-        let elsa = ['致密，惰性，广泛用于电池中。 注意：可能对生命体有毒，虽说这里已经没有多少生物了。','无','铜，塞普罗星上异常丰富的金属,不经处理的话结构很脆弱']
         // 三个一组
         let mineral_Unminedcondition = ['https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/qk.png',]
 
@@ -311,18 +381,23 @@
         let electro_discharge = ['10硅10铅','40硅40石墨','130硅80钛40钢化玻璃','850硅750钛6500塑钢','1k硅600塑钢500巨浪合金350相织布']
         let explode =['150','550','900','9000','24000']
         let burn = ['0','4','9','10',18]
-        let radiate = ['1x1格','1.25x1.25','1.62x1.65','2.75x2.75','3.25²']
+        let radiate = ['1x1<br>格','1.25x<br>1.25','1.62x<br>1.65','2.75x<br>2.75','3.25²']
         let immune = ['无','燃烧','无','无','无']
         let scope = ['18','6','29','21','23 + 15~1.2']
         let wq = ['https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%B0%96%E5%88%80-%E6%AD%A6%E5%99%A8.png','https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%88%98%E9%94%A4-%E6%AD%A6%E5%99%A8.png','https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%A0%A1%E5%9E%92-%E6%AD%A6%E5%99%A8.png','https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E6%9D%83%E6%9D%96-%E6%AD%A6%E5%99%A8.png','https://www.freeimg.cn/i/2024/02/04/65bf2c1232152.png']
         let lx = ['陆地单位','陆地单位','陆地单位','陆地单位','陆地单位']
 
-        let sl = ['2x2.30/s','2x2.72/s','2x0.5/s','2x2.30/2.87/s','2x2.33/s']
+        let sl = ['2x<br>2.30/s','2x<br>2.72/s','2x<br>0.5/s','2x<br>2.30/2.87/s','2x<br>2.33/s']
         let sh = [9,37,20,'50 10x2','80 + 20']
         let fwsh = [18,6,'29/80~4.3格',21,'18-1.6']
         let jt = [0,0,0.8,0,0]
         let ct = [0,'2x',0,'2x闪电-20伤害','10x 3x分裂子弹 x3']
         let fj = ['无','燃烧4秒','无','电击','无']
+        let qt = [0,0,0,0,0]
+        let jzsd = ['无','无','无','无','无']
+        let kcsd = ['无','无','无','无','无']
+        let kckw = ['无','无','无','无','无']
+        let zhrl = ['无','无','无','无','无']
 
 
 
@@ -344,125 +419,92 @@
       for(let i = 0; i < arr.length; i++){
 
           document.write(`<div class="scp"><div id="${arr[i]}" style = "margin-top: 100px;margin-left: 20px;"><span class="baikexinxi-text">| ${Mineralname[i]}</span>
-            <hr>
+    <hr>
 
-        <div class="pc">
-          <br>
-  <img class="baikexinxi-img" style="position: relative;top: -30px;left: 80px;border-radius: 10px;" src="${arrimg[i]}" alt="">
-        </div>
-        <div class="pe">
-  <img class="baikexinxi-img" style="position: relative;top: -40px;left: 100px;" src="${arrimg[i]}" alt="">
-        </div>
-  <div class="clear11"></div>
+<div class="pc">
   <br>
-  <span style="margin-left: 10px;"><span style="font-weight: bold;">用途:</span>${purpose[i]}</span>
+<img class="baikexinxi-img" style="position: relative;top: -30px;left: 80px;border-radius: 10px;" src="${arrimg[i]}" alt="">
+</div>
+<div class="clear11"></div>
+<br>
+<span style="margin-left: 10px;"><span style="font-weight: bold;">用途:</span>${purpose[i]}</span>
+<br>
+<br>
+<br>
+<br>
+    <span style="margin-left: 10px;">基础信息： </span>
   <br>
   <br>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%95%86%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt=""> 生命值:</span><span style="font-weight: bold;color: red;"> ${explode[i]}</span></span>
+  <div class="bain">
+      <table style="table-layout: fixed;" width="100%" cellspacing="0" cellpadding="2">
+          <tr>
+            <th><span><img src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%95%86%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt=""> 生命值: <span style="color: red;">${explode[i]}</span></span></th>
+            <th><span><img src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/Artifact-%E6%8A%A4%E7%94%B2%E5%80%BC.png" alt="">  护甲值: <span style="color: red;">${burn[i]}</span></span></th>
+            <th><span><img src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E9%9C%80%E8%A6%81.png" alt=""> 建造所需: <span style="color: red;">${electro_discharge[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bde8c3b3863.png" alt="">可否对空: <span style="color: red;">${antiaircraftfiring[i]}</span></span></th>
+          </tr>
+  
+          <tr>
+            <th><span><img src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%B0%BA%E5%AF%B8.png" alt=""> 尺寸: <span style="color: red;">${radiate[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/04/65bf1e7c88304.png" alt=""> 单位类型: <span style="color: red;">${lx[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bde8e3300a5.png" alt=""> 移动速度: <span style="color: red;">${movementspeed[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bde187e1e3e.png" alt=""> 助推: <span style="color: red;">${boost[i]}</span></span></th>
+          </tr>
+          <tr>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bde90d398fb.png" alt=""> 容量: <span style="color: red;">${capacity[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bde9e4bbc2e.png" alt=""> 免疫: <span style="color: red;">${immune[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bdeaababc97.png" alt=""> 范围: <span style="color: red;">${scope[i]}</span></span></th>
+            <th><span><img src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E9%9C%80%E8%A6%81.png" alt=""> 其他: <span style="color: red;">${qt[i]}</span></span></th>
+          </tr>
+          
+          <tr>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bdee6fab125.png" alt=""> 开火速率: <span style="color: red;">${sl[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bdee7a98e92.png" alt=""> 伤害: <span style="color: red;">${sh[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bdf020eba97.png" alt=""> 击退: <span style="color: red;">${jt[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bdee6fb923c.png" alt=""> 穿透: <span style="color: red;">${ct[i]}</span></span></th>
+          </tr>
+          <tr>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/03/65bdee885bdb2.png" alt=""> 附加: <span style="color: red;">${fj[i]}</span></span></th>
+            <th><span><svg t="1708170811182" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2587" width="200" height="200"><path d="M467.4 665.6v185.6c0 19.2 3.2 25.6 22.4 22.4 51.2 0 51.2 0 51.2 48v32c3.2 19.2-6.4 22.4-22.4 22.4-19.2 0-25.6-6.4-22.4-25.6 6.4-25.6-6.4-35.2-32-32-67.2 3.2-134.4 3.2-201.6 0-25.6 0-32 6.4-28.8 28.8 3.2 22.4-3.2 28.8-25.6 28.8-16 0-19.2-6.4-19.2-19.2v-25.6c0-19.2-6.4-41.6 3.2-54.4 9.6-12.8 35.2-3.2 54.4-3.2 12.8 0 16-3.2 16-16v-384c0-9.6 0-19.2-12.8-16-19.2 0-25.6-9.6-22.4-25.6 6.4-25.6-6.4-32-32-32-57.6 3.2-112 0-169.6 0-19.2 0-25.6-3.2-25.6-22.4 3.2-41.6 0-80 0-121.6 0-12.8-3.2-25.6 16-25.6 3.2 0 6.4-3.2 9.6-6.4 73.6-51.2 147.2-99.2 217.6-156.8 25.6-16 44.8-12.8 64-16 105.6-12.8 201.6 16 297.6 51.2 124.8 44.8 249.6 86.4 377.6 124.8 32 9.6 41.6 22.4 38.4 54.4-3.2 35.2 0 67.2 0 102.4 0 12.8 0 22.4-16 19.2-44.8-9.6-67.2 19.2-92.8 48-48 51.2-28.8 108.8-32 166.4 0 12.8 12.8 12.8 19.2 16 28.8 19.2 41.6 54.4 35.2 86.4-9.6 35.2-38.4 57.6-73.6 57.6-35.2 0-64-19.2-76.8-51.2-3.2-9.6-9.6-22.4 3.2-25.6 12.8-3.2 28.8-9.6 38.4 6.4 3.2 3.2 3.2 6.4 3.2 9.6 9.6 12.8 19.2 19.2 35.2 16 16-3.2 25.6-16 22.4-32 0-16-9.6-32-25.6-32-32 0-28.8-16-28.8-38.4 0-28.8-3.2-54.4 0-83.2 9.6-64-38.4-96-70.4-140.8-6.4-6.4-16-3.2-22.4-3.2h-217.6c-19.2 0-25.6 3.2-22.4 22.4 3.2 16 3.2 35.2-22.4 28.8-16-3.2-9.6 12.8-9.6 19.2v192z m-160-3.2v188.8c0 12.8 3.2 19.2 19.2 19.2h76.8c12.8 0 16-3.2 16-16v-384c0-16-6.4-19.2-19.2-16h-70.4c-19.2 0-25.6 3.2-25.6 25.6 6.4 60.8 3.2 121.6 3.2 182.4z m432-304s0-3.2 0 0h185.6c54.4 0 51.2 0 54.4-51.2 0-19.2-6.4-25.6-25.6-25.6H557c-57.6 0-54.4 0-54.4 54.4 0 16 3.2 22.4 22.4 22.4 70.4-3.2 140.8 0 214.4 0zM272.2 313.6v73.6c0 12.8 3.2 22.4 19.2 19.2h147.2c16 0 19.2-6.4 19.2-19.2V240c0-16-6.4-19.2-19.2-19.2H291.4c-12.8 0-19.2 6.4-19.2 19.2v73.6z m579.2-80c-12.8-3.2-19.2-6.4-25.6-9.6-41.6-12.8-83.2-28.8-124.8-41.6-73.6-22.4-144-48-217.6-70.4-6.4-3.2-19.2-12.8-19.2 3.2v57.6c0 6.4 3.2 9.6 9.6 9.6 28.8-6.4 25.6 16 25.6 32s3.2 22.4 19.2 22.4c108.8-3.2 217.6-3.2 332.8-3.2zM137.8 358.4h35.2c54.4 0 54.4 0 54.4-54.4 0-16-3.2-22.4-22.4-22.4H102.6c-60.8 0-60.8 0-57.6 60.8 0 12.8 3.2 16 16 16 28.8-3.2 51.2 0 76.8 0z m224-176h44.8c6.4 0 12.8 0 12.8-9.6 0-22.4 6.4-51.2-3.2-70.4-6.4-16-38.4-6.4-57.6-6.4h-19.2c-28.8-6.4-35.2 6.4-32 32 3.2 54.4 0 54.4 54.4 54.4zM96.2 233.6c38.4 0 70.4-3.2 102.4 0 25.6 3.2 32-6.4 28.8-28.8-3.2-16 0-28.8 22.4-22.4 9.6 0 12.8 0 12.8-12.8V118.4C205 156.8 153.8 192 96.2 233.6z m793.6 166.4h-54.4c-16 0-12.8 3.2-6.4 16 25.6 35.2 25.6 35.2 51.2 0 3.2-3.2 6.4-6.4 9.6-16z" p-id="2588" fill="#080606"></path><path d="M352.2 384c-57.6 0-57.6 0-57.6-54.4v-28.8c-3.2-19.2 0-25.6 22.4-25.6s22.4 9.6 22.4 28.8c0 38.4 0 41.6 41.6 38.4 22.4 0 25.6 6.4 25.6 25.6 0 16-6.4 22.4-22.4 19.2-6.4-3.2-19.2-3.2-32-3.2z" p-id="2589" fill="#080606"></path></svg> 建造速度: <span style="color: red;">${jzsd[i]}</span></span></th>
+            
+            <th><span><svg t="1708170890238" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3642" width="200" height="200"><path d="M178.451 1000.119l-73.219-73.219 675.233-667.097 73.219 73.219z" p-id="3643" fill="#080606"></path><path d="M244.315 403.251l74.782-74.782 592.507 592.507-74.782 74.782-592.507-592.507z" p-id="3644" fill="#080606"></path><path d="M520.135 23.881c-8.135 16.269 235.924 187.113 244.060 252.198 0 8.135 0 32.544 24.406 48.812 8.135 8.135-24.406 16.269-24.406 24.406 40.675 24.406 56.947-16.269 81.354-8.135 146.435 65.083 162.706 301.007 162.706 301.007 8.135 8.135 32.544-235.924-97.626-406.766-122.030-162.706-382.362-219.654-390.497-211.521z" p-id="3645" fill="#080606"></path><path d="M23.881 186.588c0 0 81.354 301.007 105.76 333.549s48.812 32.544 73.219 16.269c24.406-16.269 235.924-235.924 235.924-235.924s16.269-16.269 16.269-40.675c0-32.544-8.135-48.812-40.675-56.947s-333.549-89.486-333.549-89.486-32.544-16.269-65.083 8.135c-16.269 16.269 8.135 65.083 8.135 65.083z" p-id="3646" fill="#080606"></path></svg> 采矿速度: <span style="color: red;">${kcsd[i]}</span></span></th>
+            <th><span><img src="https://www.freeimg.cn/i/2024/02/17/65d0a11f1b3e7.png" alt=""> 可采集矿物: <span style="color: red;">${kckw[i]}</span></span></th>
+            
+          </tr>
+          <th><span><svg t="1708171569176" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8069" width="200" height="200"><path d="M527.5136 877.073067H103.492267v58.2656H628.053333v-19.626667l2.833067 1.314133c-2.184533-1.006933-4.369067-2.048-6.519467-3.1232l-40.021333 19.985067zM738.2016 527.36h-45.448533l-10.5472 31.624533-14.779734 4.215467a172.373333 172.373333 0 0 0-30.72 11.946667l-7.287466 3.874133-13.499734 7.662933-25.856-12.9024-32.1024 32.119467 12.9024 25.838933-7.662933 13.550934a173.021867 173.021867 0 0 0-13.4656 30.1056l-2.440533 7.901866-4.181334 14.728534-31.624533 10.564266v45.431467l31.624533 10.564267 4.1984 14.779733a172.373333 172.373333 0 0 0 13.653334 33.809067l4.488533 7.953066 8.2432 13.653334-15.701333 31.419733 32.136533 32.119467 34.2528-17.066667 13.021867 6.519467a175.940267 175.940267 0 0 0 22.3232 9.301333l7.714133 2.389333 14.779733 4.1984 10.5472 31.607467h45.448534l10.5984-31.607467 14.779733-4.1984a178.688 178.688 0 0 0 22.7328-8.2432l7.2704-3.413333 13.056-6.485333 34.218667 17.066666 32.119466-32.085333-15.684266-31.3856 8.260266-13.653333a173.6192 173.6192 0 0 0 15.36-33.041067l2.747734-8.7552 4.1984-14.7456 31.607466-10.5984v-45.499733L887.876267 698.026667l-4.1984-14.762667a173.9264 173.9264 0 0 0-12.049067-30.72l-3.874133-7.287467-7.594667-13.4656 12.885333-25.838933-32.119466-32.119467-25.821867 12.9024-13.482667-7.662933a174.574933 174.574933 0 0 0-30.208-13.431467l-7.8336-2.440533-14.779733-4.1984z m-80.9984 407.978667A29.1328 29.1328 0 0 1 628.053333 964.488533H103.492267a29.1328 29.1328 0 0 1-29.149867-29.149866v-58.2656a29.1328 29.1328 0 0 1 29.149867-29.149867h431.086933l5.870933-11.7248a201.9328 201.9328 0 0 1-21.1456-48.776533l-36.9664-12.356267V747.178667l-13.841066 2.048a555.6224 555.6224 0 0 1-66.304 4.727466v56.32l18.4832-18.4832a7.287467 7.287467 0 0 1 8.738133-1.160533l1.553067 1.160533a7.3216 7.3216 0 0 1 1.194666 8.7552l-1.160533 1.570134-30.9248 30.890666a7.287467 7.287467 0 0 1-8.738133 1.194667l-1.5872-1.1776-30.890667-30.890667a7.287467 7.287467 0 0 1 8.7552-11.485866l1.536 1.160533 18.449067 18.4832v-56.32h-1.706667c-129.979733-2.013867-237.1072-46.984533-251.528533-109.994667h-1.706667V294.212267c0-48.878933 67.669333-90.7264 163.652267-108.032a71.68 71.68 0 0 1-3.413334-23.125334 102.007467 102.007467 0 0 1 203.997867 0 75.605333 75.605333 0 0 1-2.218667 19.234134l-1.160533 3.908266c93.3888 16.896 159.9488 56.832 163.549867 103.936l0.170666 4.027734V535.893333l2.235734-0.682666 12.3392-36.9152h87.432533l12.356267 36.949333a202.069333 202.069333 0 0 1 44.373333 18.568533l30.72-15.36 61.815467 61.815467-15.36 30.72a202.069333 202.069333 0 0 1 18.5856 44.373333l36.932266 12.322134v87.432533l-36.949333 12.356267A202.6496 202.6496 0 0 1 890.5216 836.266667l17.92 35.84-61.815467 61.781333-39.9872-19.985067a201.693867 201.693867 0 0 1-35.072 13.653334l-12.356266 36.949333h-87.432534l-12.3392-36.9152-2.235733-0.733867z m58.282667-291.413334A87.432533 87.432533 0 1 1 628.053333 731.3408a87.432533 87.432533 0 0 1 87.432534-87.415467z m0 14.557867a72.8576 72.8576 0 1 0 72.8576 72.8576 72.8576 72.8576 0 0 0-72.8576-72.8576zM628.053333 347.630933c-43.5712 37.546667-131.6352 63.146667-233.1648 63.146667s-189.559467-25.6-233.147733-63.146667v241.527467l4.317867-4.232533 9.9328 10.6496a80.213333 80.213333 0 0 0-14.2848 17.2544v16.520533l0.136533 3.293867c4.471467 48.264533 106.24 92.16 233.0112 92.16a511.726933 511.726933 0 0 0 87.415467-7.304534v-29.866666l36.932266-12.322134a203.349333 203.349333 0 0 1 18.5856-44.373333l-15.36-30.72 61.815467-61.815467 30.72 15.36 7.5776-4.078933 6.929067-3.413333-1.467734 0.699733v-199.338667z m-294.8608 175.786667l1.621334 14.472533a440.849067 440.849067 0 0 0-73.147734 14.2848l-10.9568 3.413334-4.5056-13.841067a441.1392 441.1392 0 0 1 87.04-18.261333z m87.808-2.798933a519.799467 519.799467 0 0 1 74.103467 8.6528l13.8752 2.9184-3.242667 14.216533a479.061333 479.061333 0 0 0-70.485333-10.325333l-14.933333-0.904534z m-104.106666-309.572267l1.911466 1.024c-92.16 13.175467-157.115733 48.8448-157.115733 82.107733 0 41.813333 102.587733 87.415467 233.147733 87.415467S628.053333 336.0256 628.053333 294.212267c0-33.262933-64.853333-68.932267-157.013333-82.1248l0.426667-0.2048c-11.946667 6.263467-27.562667 8.874667-45.226667 9.966933l-10.0864 0.4608h-1.860267 0.290134l4.949333-0.170667 3.84-0.187733h0.733867v15.36c58.402133 5.888 102.007467 29.013333 102.007466 56.832 0 32.187733-58.7264 58.282667-131.140266 58.282667s-131.140267-26.094933-131.140267-58.282667c0-27.7504 43.588267-50.944 101.9904-56.832v-15.36l4.471467 0.221867-1.809067-0.1024 3.413333 0.1536c2.013867 0 4.078933 0.136533 6.126934 0.170666h0.170666l-9.403733-0.290133c-17.937067-0.8192-33.928533-2.9184-46.557867-8.448zM424.055467 249.173333v15.889067a29.149867 29.149867 0 1 1-58.282667 0v-13.021867l-6.519467 0.785067c-47.325867 6.314667-80.878933 24.4736-80.878933 41.386667 0 20.923733 51.3024 43.707733 116.5824 43.707733s116.565333-22.784 116.565333-43.707733c0-17.664-36.625067-36.727467-87.3984-42.171734z m-14.574934-26.7264l-19.985066 0.1024-9.181867-0.1024v42.666667a14.574933 14.574933 0 0 0 28.910933 2.628267l0.221867-2.628267z m-14.557866-132.2496a72.874667 72.874667 0 0 0-72.874667 72.8576c0 19.063467 6.826667 26.624 35.447467 29.184l9.2672 0.631467 10.666666 0.392533 12.117334 0.136534h17.698133l5.614933-0.1024 10.24-0.392534 4.6592-0.273066 8.277334-0.733867c25.6-2.952533 31.778133-10.7008 31.778133-28.7744a72.874667 72.874667 0 0 0-72.891733-72.925867z" p-id="8070"></path></svg> 载荷容量: <span style="color: red;">${zhrl[i]}</span></span></th>
+          <tr>
+            
+          </tr>
+        </table>
+        
+        
+    </div>
+
+<br>
+<div style="border: 5px solid black;border-radius: 5px;margin-right: 15px;">
+<div class="pc">
+<span style="margin-left: 20px; position: relative;top: 10px; font-weight: bold;">${Mineralname[i]}</span>
+<hr>
+<img style="margin-top: 10px;margin-left: 400px; border: 2px solid black; border-radius: 2px;width: 400px;height: 300px;" src="${arrimg[i]}" alt="">
+</div>
 <div class="pe">
-  <br>
+<span style="margin-left: 20px; margin-top: 50px; font-weight: bold;">${Mineralname[i]}</span>
+<hr>
+<img style="margin-top: 3px;margin-left: 10px; border: 2px solid black; border-radius: 5px;width: 300px;height: 200px;" src="${arrimg[i]}" alt="">
 </div>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="http://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/Artifact-%E6%8A%A4%E7%94%B2%E5%80%BC.png" alt=""> 护甲值:</span><span style="font-weight: bold;color: red;"> ${burn[i]}</span></span>
-  <div class="pe">
-    <br>
-  </div>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E5%B0%BA%E5%AF%B8.png" alt=""> 尺寸:</span><span style="font-weight: bold;color: red;"> ${radiate[i]}</span></span>
-  <div class="pe">
-    <br>
-  </div>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://aspetattachments.wdfiles.com/local--files/place-where-temporary-attachments-remain/%E9%9C%80%E8%A6%81.png" alt=""> 建造花费:</span><span style="font-weight: bold;color: red;"> ${electro_discharge[i]}</span></span>
-
-  <br>
-  <br>
-  <div class = "pc">
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/04/65bf1e7c88304.png" alt=""> 单位类型:</span><span style="font-weight: bold;color: red;"> ${lx[i]}</span></span>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde8c3b3863.png" alt=""> 是否对空:</span><span style="font-weight: bold;color: red;"> ${antiaircraftfiring[i]}</span></span>
-
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde8e3300a5.png" alt=""> 移动速度:</span><span style="font-weight: bold;color: red;"> ${movementspeed[i]}</span></span>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde187e1e3e.png" alt=""> 助推:</span><span style="font-weight: bold;color: red;"> ${boost[i]}</span></span>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde90d398fb.png" alt=""> 容量:</span><span style="font-weight: bold;color: red;"> ${capacity[i]}</span></span>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde9e4bbc2e.png" alt=""> 免疫:</span><span style="font-weight: bold;color: red;"> ${immune[i]}</span></span>
-  <br>
-  <br>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdeaababc97.png" alt=""> 范围:</span><span style="font-weight: bold;color: red;"> ${scope[i]}</span></span>
-  </div>
-  <div class = "pe">
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/04/65bf1e7c88304.png" alt=""> 单位类型:</span><span style="font-weight: bold;color: red;"> ${lx[i]}</span></span>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde8c3b3863.png" alt=""> 是否对空:</span><span style="font-weight: bold;color: red;"> ${antiaircraftfiring[i]}</span></span>
-
-    <br>
-    <br>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde8e3300a5.png" alt=""> 移动速度:</span><span style="font-weight: bold;color: red;"> ${movementspeed[i]}</span></span>
-  <br>
-  <br>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde187e1e3e.png" alt=""> 助推:</span><span style="font-weight: bold;color: red;"> ${boost[i]}</span></span>
-  </br>
-  <br>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde90d398fb.png" alt=""> 容量:</span><span style="font-weight: bold;color: red;"> ${capacity[i]}</span></span>
-  </br>
-  <br>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bde9e4bbc2e.png" alt=""> 免疫:</span><span style="font-weight: bold;color: red;"> ${immune[i]}</span></span>
-  <br>
-  <br>
-  <span class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdeaababc97.png" alt=""> 范围:</span><span style="font-weight: bold;color: red;"> ${scope[i]}</span></span>
-  </div>
-  <br>
-  <br>
-
-<br>
-<div style="border: 3px solid black;border-radius: 5px;">
-    <div class="pc">
-    <span style="margin-left: 20px; position: relative;top: 10px; font-weight: bold;">${Mineralname[i]}</span>
-    <hr>
-    <img style="margin-top: 10px;margin-left: 400px; border: 2px solid black; border-radius: 2px;width: 400px;height: 300px;" src="${arrimg[i]}" alt="">
-    </div>
-    <div class="pe">
-    <span style="margin-left: 20px; margin-top: 50px; font-weight: bold;">${Mineralname[i]}</span>
-    <hr>
-    <img style="margin-top: 3px;margin-left: 10px; border: 2px solid black; border-radius: 5px;width: 300px;height: 200px;" src="${arrimg[i]}" alt="">
-    </div>
 </div>
 <br>
-<div class="teshu" style="border: 3px solid black;border-radius: 5px;">
-    <span style="margin-left: 20px; font-weight: bold;">${Mineralname[i]}-武器</span>
-    <hr>
-  <img style="margin-top: 3px; margin-bottom: 10px; margin-left: 30px; border: 2px solid black; border-radius: 5px;width: 100px;height: 100px;" src="${wq[i]}" alt="">
-    <div style = "margin-left: 170px;"  class = "pc1">
-    <span style = "position: relative;top: -50px;font-size: 16px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;margin-left: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdee6fab125.png" alt=""> 开火速率:</span><span style="font-weight: bold;color: red;"> ${sl[i]}</span></span> 
-    <span style = "position: relative;top: -50px;font-size: 16px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdee7a98e92.png" alt=""> 伤害:</span><span style="font-weight: bold;color: red;"> ${sh[i]}</span></span> 
-    <span style = "position: relative;top: -50px;font-size: 16px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdf020eba97.png" alt=""> 击退:</span><span style="font-weight: bold;color: red;"> ${jt[i]}</span></span> 
-    <span style = "position: relative;top: -50px;font-size: 16px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdee6fb923c.png" alt=""> 穿透:</span><span style="font-weight: bold;color: red;"> ${ct[i]}</span></span> 
-    <span style = "position: relative;top: -50px;font-size: 16px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdee885bdb2.png" alt=""> 附加:</span><span style="font-weight: bold;color: red;"> ${fj[i]}</span></span> 
+<div class="teshu" style="border: 5px solid black;border-radius: 5px;margin-right: 15px;">
+<span style="margin-left: 20px; font-weight: bold;">${Mineralname[i]}-武器</span>
+<hr>
+<img style="margin-top: 3px; margin-bottom: 10px; margin-left: 30px; border: 2px solid black; border-radius: 5px;width: 100px;height: 100px;" src="${wq[i]}" alt="">
+<div style = "margin-left: 170px;"  class = "pc1">
 </div>
-    <div class = "pe">
-      <br>
-      <br>
-      <br>
-    <span style = "position: relative;top: -50px;font-size: 17px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;margin-left: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdee6fab125.png" alt=""> 开火速率:</span><span style="font-weight: bold;color: red;"> ${sl[i]}</span></span> 
-    <br>
-    <br>
-    <span style = "position: relative;top: -50px;font-size: 17px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdee7a98e92.png" alt=""> 伤害:</span><span style="font-weight: bold;color: red;"> ${sh[i]}</span></span> 
-    <br>
-    <br>
-    <span style = "position: relative;top: -50px;font-size: 17px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdeaababc97.png" alt=""> 范围伤害:</span><span style="font-weight: bold;color: red;"> ${fwsh[i]}</span></span> 
-    <br>
-    <br>
-    <span style = "position: relative;top: -50px;font-size: 17px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdf020eba97.png" alt=""> 击退:</span><span style="font-weight: bold;color: red;"> ${jt[i]}</span></span> 
-    <br>
-    <br>
-    <span style = "position: relative;top: -50px;font-size: 17px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdee6fb923c.png" alt=""> 穿透:</span><span style="font-weight: bold;color: red;"> ${ct[i]}</span></span> 
-    <br>
-    <br>
-    <span style = "position: relative;top: -50px;font-size: 17px;" class="xinxi-1111"><span class="xinxi-2222"><img style="margin-bottom: 10px;" class="img-tsxx" src="https://www.freeimg.cn/i/2024/02/03/65bdee885bdb2.png" alt=""> 附加:</span><span style="font-weight: bold;color: red;"> ${fj[i]}</span></span> 
 </div>
-    </div>
-    <br>
-    <br>
-     
-  </div>
-</div></div>
-</div>
-<br><br><hr>`)
+<br>
+<br>
+
+</div>`)
 
 //    let btn = document.getElementById(arr[is]);
 // 		btn.onclick=function(){
